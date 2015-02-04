@@ -7,19 +7,16 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY academics2 "www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
-    <!ENTITY academics3 "https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
-    <!ENTITY academics "http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
+    
 ]>
 
 
 <rdf:RDF xmlns="https://github.com/loneharoon/Semantics/blob/master/academics.owl#"
      xml:base="https://github.com/loneharoon/Semantics/blob/master/academics.owl"
      xmlns:academics2="www.github.com/loneharoon/Semantics/blob/master/academics.owl#"
-     xmlns:academics3="https://github.com/loneharoon/Semantics/blob/master/&academics2;"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:academics="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://github.com/loneharoon/Semantics/blob/master/academics.owl"/>
     
