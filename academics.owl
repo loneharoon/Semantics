@@ -123,6 +123,7 @@
 
     <owl:Class rdf:about="&academics2;Lecturer">
         <rdfs:subClassOf rdf:resource="&academics2;Person"/>
+        <owl:disjointWith rdf:resource="&academics2;MathModule"/>
     </owl:Class>
     
 
@@ -131,6 +132,7 @@
 
     <owl:Class rdf:about="&academics2;MathModule">
         <rdfs:subClassOf rdf:resource="&academics2;Module"/>
+        <owl:disjointWith rdf:resource="&academics2;Student"/>
     </owl:Class>
     
 
@@ -271,14 +273,6 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&academics2;CSModule"/>
             <rdf:Description rdf:about="&academics2;Lecturer"/>
-            <rdf:Description rdf:about="&academics2;Student"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&academics2;Lecturer"/>
-            <rdf:Description rdf:about="&academics2;MathModule"/>
             <rdf:Description rdf:about="&academics2;Student"/>
         </owl:members>
     </rdf:Description>
