@@ -6,18 +6,23 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY academics2 "www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
-    
+    <!ENTITY academics4 "www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
+    <!ENTITY academics2 "https://www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
+    <!ENTITY academics3 "https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
+    <!ENTITY academics "http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#" >
 ]>
 
 
 <rdf:RDF xmlns="https://github.com/loneharoon/Semantics/blob/master/academics.owl#"
      xml:base="https://github.com/loneharoon/Semantics/blob/master/academics.owl"
-     xmlns:academics2="www.github.com/loneharoon/Semantics/blob/master/academics.owl#"
+     xmlns:academics2="https://&academics4;"
+     xmlns:academics3="https://github.com/loneharoon/Semantics/blob/master/&academics4;"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:academics="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:academics4="www.github.com/loneharoon/Semantics/blob/master/academics.owl#">
     <owl:Ontology rdf:about="https://github.com/loneharoon/Semantics/blob/master/academics.owl"/>
     
 
@@ -35,117 +40,117 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#firstName -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;firstName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Person"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;firstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Person"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#lastName -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;lastName">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Person"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Person"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#staffID -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;staffID">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;staffID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#studentID -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;studentID">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;studentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#studies -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;studies"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;studies"/>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#teaches -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;teaches"/>
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;teaches"/>
     
 
 
     <!-- https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#firstName -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics2;firstName"/>
+    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics4;firstName"/>
     
 
 
     <!-- https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#lastName -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics2;lastName"/>
+    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics4;lastName"/>
     
 
 
     <!-- https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#staffID -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics2;staffID"/>
+    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics4;staffID"/>
     
 
 
     <!-- https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#studentID -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics2;studentID"/>
+    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics4;studentID"/>
     
 
 
     <!-- https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#studies -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics2;studies"/>
+    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics4;studies"/>
     
 
 
     <!-- https://github.com/loneharoon/Semantics/blob/master/www.github.com/loneharoon/Semantics/blob/master/academics.owl#teaches -->
 
-    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics2;teaches"/>
+    <owl:AnnotationProperty rdf:about="https://github.com/loneharoon/Semantics/blob/master/&academics4;teaches"/>
     
 
 
     <!-- www.github.com/loneharoon/Semantics/blob/master/academics.owl#firstName -->
 
-    <owl:AnnotationProperty rdf:about="&academics2;firstName"/>
+    <owl:AnnotationProperty rdf:about="&academics4;firstName"/>
     
 
 
     <!-- www.github.com/loneharoon/Semantics/blob/master/academics.owl#lastName -->
 
-    <owl:AnnotationProperty rdf:about="&academics2;lastName"/>
+    <owl:AnnotationProperty rdf:about="&academics4;lastName"/>
     
 
 
     <!-- www.github.com/loneharoon/Semantics/blob/master/academics.owl#staffID -->
 
-    <owl:AnnotationProperty rdf:about="&academics2;staffID"/>
+    <owl:AnnotationProperty rdf:about="&academics4;staffID"/>
     
 
 
     <!-- www.github.com/loneharoon/Semantics/blob/master/academics.owl#studentID -->
 
-    <owl:AnnotationProperty rdf:about="&academics2;studentID"/>
+    <owl:AnnotationProperty rdf:about="&academics4;studentID"/>
     
 
 
     <!-- www.github.com/loneharoon/Semantics/blob/master/academics.owl#studies -->
 
-    <owl:AnnotationProperty rdf:about="&academics2;studies"/>
+    <owl:AnnotationProperty rdf:about="&academics4;studies"/>
     
 
 
     <!-- www.github.com/loneharoon/Semantics/blob/master/academics.owl#teaches -->
 
-    <owl:AnnotationProperty rdf:about="&academics2;teaches"/>
+    <owl:AnnotationProperty rdf:about="&academics4;teaches"/>
     
 
 
@@ -162,18 +167,18 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#studies -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;studies">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Module"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;studies">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Module"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#teaches -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;teaches">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Module"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Module"/>
     </owl:ObjectProperty>
     
 
@@ -191,7 +196,7 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#firstName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;firstName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;firstName">
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -199,7 +204,7 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#lastName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;lastName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;lastName">
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -207,7 +212,7 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#staffID -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;staffID">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;staffID">
         <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
@@ -215,7 +220,7 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#studentID -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;studentID">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;studentID">
         <rdfs:range rdf:resource="&xsd;integer"/>
     </owl:DatatypeProperty>
     
@@ -234,47 +239,47 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#CSModule -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CSModule">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Module"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;MathModule"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CSModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Module"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;MathModule"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Lecturer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Person"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;MathModule"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;MathModule"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#MathModule -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;MathModule">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Module"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;MathModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Module"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Module -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Module"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Module"/>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Person"/>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Student -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Person"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Person"/>
     </owl:Class>
     
 
@@ -292,84 +297,84 @@
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#CS101 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CS101">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CSModule"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CS101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CSModule"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#CS102 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CS102">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CSModule"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CS102">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CSModule"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Lecturer1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer"/>
-        <academics2:staffID rdf:datatype="&xsd;integer">1000</academics2:staffID>
-        <academics2:firstName rdf:datatype="&xsd;string">Pushpendera</academics2:firstName>
-        <academics2:lastName rdf:datatype="&xsd;string">Singh</academics2:lastName>
-        <academics2:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CS101"/>
-        <academics2:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CS102"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer"/>
+        <academics4:staffID rdf:datatype="&xsd;integer">1000</academics4:staffID>
+        <academics4:firstName rdf:datatype="&xsd;string">Pushpendera</academics4:firstName>
+        <academics4:lastName rdf:datatype="&xsd;string">Singh</academics4:lastName>
+        <academics4:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CS101"/>
+        <academics4:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CS102"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Lecturer2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer"/>
-        <academics2:staffID rdf:datatype="&xsd;integer">2000</academics2:staffID>
-        <academics2:firstName rdf:datatype="&xsd;string">Mayank</academics2:firstName>
-        <academics2:lastName rdf:datatype="&xsd;string">Vatsa</academics2:lastName>
-        <academics2:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;M501"/>
-        <academics2:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;M502"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer"/>
+        <academics4:staffID rdf:datatype="&xsd;integer">2000</academics4:staffID>
+        <academics4:firstName rdf:datatype="&xsd;string">Mayank</academics4:firstName>
+        <academics4:lastName rdf:datatype="&xsd;string">Vatsa</academics4:lastName>
+        <academics4:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;M501"/>
+        <academics4:teaches rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;M502"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#M501 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;M501">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;MathModule"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;M501">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;MathModule"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#M502 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;M502">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;MathModule"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;M502">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;MathModule"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Student1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student"/>
-        <academics2:studentID rdf:datatype="&xsd;integer">222</academics2:studentID>
-        <academics2:firstName rdf:datatype="&xsd;string">Haroon</academics2:firstName>
-        <academics2:firstName rdf:datatype="&xsd;string">Rashid</academics2:firstName>
-        <academics2:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CS101"/>
-        <academics2:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;M501"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student"/>
+        <academics4:studentID rdf:datatype="&xsd;integer">222</academics4:studentID>
+        <academics4:firstName rdf:datatype="&xsd;string">Haroon</academics4:firstName>
+        <academics4:firstName rdf:datatype="&xsd;string">Rashid</academics4:firstName>
+        <academics4:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CS101"/>
+        <academics4:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;M501"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/www.github.com/loneharoon/Semantics/blob/master/academics.owl#Student2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student"/>
-        <academics2:studentID rdf:datatype="&xsd;integer">111</academics2:studentID>
-        <academics2:firstName rdf:datatype="&xsd;string">Mehran</academics2:firstName>
-        <academics2:lastName rdf:datatype="&xsd;string">Rashid</academics2:lastName>
-        <academics2:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CS102"/>
-        <academics2:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;M502"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student"/>
+        <academics4:studentID rdf:datatype="&xsd;integer">111</academics4:studentID>
+        <academics4:firstName rdf:datatype="&xsd;string">Mehran</academics4:firstName>
+        <academics4:lastName rdf:datatype="&xsd;string">Rashid</academics4:lastName>
+        <academics4:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CS102"/>
+        <academics4:studies rdf:resource="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;M502"/>
     </owl:NamedIndividual>
     
 
@@ -385,9 +390,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;CSModule"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Lecturer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics2;Student"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;CSModule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Lecturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/&academics4;Student"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
