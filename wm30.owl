@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.oclc.org/NET/ssnx/meteo/WM30#"
+     xml:base="http://purl.oclc.org/NET/ssnx/meteo/WM30"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#unitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#unitOfMeasure"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#unitOfMeasureFor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#unitOfMeasureFor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#SensingDescritption -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#SensingDescritption"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValue"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueExclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueExclusive"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueInclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueInclusive"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValue"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueExclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueExclusive"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueInclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueInclusive"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#DampingRatio -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#DampingRatio"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#DelayDistance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#DelayDistance"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#DistanceConstant -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#DistanceConstant"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#OverShootRatio -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#OverShootRatio"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#StartingThreshold -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#StartingThreshold"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#TransducerOutput -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#TransducerOutput"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#Vaisala_WM30 -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#Vaisala_WM30">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#ValueRange -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#ValueRange"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_OperatingRange -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_OperatingRange"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_SurvivalRange -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_SurvivalRange"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection_MeasurementCapability -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection_MeasurementCapability"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection_MeasurementCapability_WMS301 -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection_MeasurementCapability_WMS301"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection_MeasurementCapability_WMS302 -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection_MeasurementCapability_WMS302"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed_MeasurementCapability -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed_MeasurementCapability"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed_MeasurementCapability_WSgrt10ms -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed_MeasurementCapability_WSgrt10ms"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed_MeasurementCapability_WSless10ms -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed_MeasurementCapability_WSless10ms"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WMS301 -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WMS301"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WMS302 -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WMS302"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WindDirection -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WindDirection"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WindFeature -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WindFeature"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WindSpeed -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WindSpeed"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
