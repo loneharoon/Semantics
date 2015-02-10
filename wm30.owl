@@ -44,6 +44,34 @@
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#Vaisala_WM30"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindDirection"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#implements -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implements">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_WindSpeed"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#observes -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observes">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#Vaisala_WM30"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WindDirection"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WindSpeed"/>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -251,6 +279,25 @@
     <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WindSpeed -->
 
     <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WindSpeed"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#wm30_CharacteristicTransferFunction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#wm30_CharacteristicTransferFunction">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
