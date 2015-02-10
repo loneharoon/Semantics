@@ -17,6 +17,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30">
         <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu"/>
     </owl:Ontology>
     
 
@@ -41,6 +42,15 @@
     <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#unitOfMeasureFor -->
 
     <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#unitOfMeasureFor"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_OperatingRange"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange"/>
+    </rdf:Description>
     
 
 
@@ -199,7 +209,9 @@
 
     <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_OperatingRange -->
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_OperatingRange"/>
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_OperatingRange">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingRange"/>
+    </owl:Class>
     
 
 
