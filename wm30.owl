@@ -85,7 +85,10 @@
 
     <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#SensingDescritption -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#SensingDescritption"/>
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#SensingDescritption">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensing"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -188,7 +191,9 @@
 
     <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction -->
 
-    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction"/>
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensing"/>
+    </owl:Class>
     
 
 
@@ -297,6 +302,7 @@
 
     <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#wm30_CharacteristicTransferFunction">
         <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#WM30_CharacteristicTransferFunction"/>
+        <SensingDescritption rdf:datatype="&xsd;string">-0.24+0.699*F</SensingDescritption>
     </owl:NamedIndividual>
 </rdf:RDF>
 
