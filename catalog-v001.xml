@@ -3,12 +3,12 @@
     <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/qu/qu" uri="qu.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn2.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="http://purl.oclc.org/NET/ssnx/meteo/WM30" uri="wm30.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="temperatureSensor.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="http://www.loa-cnr.it/ontologies/DUL.owl" uri="DUL.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="https://github.com/loneharoon/Semantics/blob/master/academics.owl" uri="academics.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1423894678739" name="https://github.com/loneharoon/Semantics/blob/master/sports.owl" uri="sports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="http://purl.oclc.org/NET/ssnx/meteo/WM30" uri="wm30.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="temperatureSensor.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="http://www.loa-cnr.it/ontologies/DUL.owl" uri="DUL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="https://github.com/loneharoon/Semantics/blob/master/academics.owl" uri="academics.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1423903523597" name="https://github.com/loneharoon/Semantics/blob/master/sports.owl" uri="sports.owl"/>
     </group>
 </catalog>
