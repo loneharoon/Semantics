@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#" xmlns:weather="http://purl.oclc.org/NET/ssnx/weather-station/station#" xmlns="http://purl.oclc.org/NET/ssnx/weather-station/station#" xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#">
+	<owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station">
+		<dc:title>SSN Ontology example: Linked Sensor Data - Weather station</dc:title>
+		<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W3C Semantic Sensor Network Incubator Group</dc:creator>
+		<dct:created>2010-10-19</dct:created>
+		<dct:modified>2011-06-20</dct:modified>
+		<dc:rights>Copyright 2010 - 2011 W3C.</dc:rights>
+		<cc:license rdf:resource="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html"/>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An example showing how the SSN-XG sensor ontology (http://www.w3.org/2005/Incubator/ssn/) can be used to describe a weather station</rdfs:comment>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org</rdfs:comment>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). The concepts and structure of the ontology were discussed in the group's meetings and on the mailing list. For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/</rdfs:comment>
+		<rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2005/Incubator/ssn/</rdfs:seeAlso>
+		<dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.oclc.org/NET/ssnx/weather-station/station</dc:identifier>
+		<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semantic Sensor Network Ontology</dc:title>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+		<owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+	</owl:Ontology>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/author"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+	<owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+	<!-- Imported definitions -->
+	<!-- DUL (latest version) -->
+	<!--http://www.loa-cnr.it/ontologies/DUL.owl#Amount -->
+	<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+	<!--http://www.loa-cnr.it/ontologies/DUL.owl#Region -->
+	<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
+	<!--http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure -->
+	<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasPart -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue -->
+	<owl:DatatypeProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
+	<!-- SSN -->
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+	<!--http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange-->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange"/>
+	<!--http://purl.oclc.org/NET/ssnx/ssn#Platform -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Feature -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Accuracy -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#forProperty-->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#inCondition -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#attachedSystem -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#attachedSystem"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#onPlatform -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasValue -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+	<!-- Local definitions -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#hasMeasurementPropertyMinValue">
+		<rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#hasMeasurementPropertyMaxValue">
+		<rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"/>
+	</owl:ObjectProperty>
+	<!-- Locally defined unit, quantities and feature -->
+	<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+	<ssn:Property rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#windspeed"/>
+	<ssn:Property rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#snowprecipitation"/>
+	<ssn:Property rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#windspeed"/>
+	<ssn:FeatureOfInterest rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Blizzard_2010-06-29"/>
+	<ssn:SensingDevice rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Sensor_HMP50">
+		<ssn:hasMeasurementCapability>
+			<ssn:MeasurementCapability rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#MeasurementCapability_34">
+				<ssn:forProperty>
+					<ssn:Property rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#temperature"/>
+				</ssn:forProperty>
+				<ssn:inCondition>
+					<ssn:MeasurementRange rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#temperatureR_1">
+						<ssn:hasValue>
+							<DUL:Region rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#temperatureR_1_interval">
+								<weather:hasMeasurementPropertyMaxValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#temperatureR_1_max_value">
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</DUL:hasDataValue>
+										<DUL:isClassifiedBy>
+											<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+										</DUL:isClassifiedBy>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMaxValue>
+								<weather:hasMeasurementPropertyMinValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#temperatureR_1_min_value">
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-40.0</DUL:hasDataValue>
+										<DUL:isClassifiedBy>
+											<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+										</DUL:isClassifiedBy>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMinValue>
+							</DUL:Region>
+						</ssn:hasValue>
+					</ssn:MeasurementRange>
+				</ssn:inCondition>
+				<ssn:hasMeasurementCapability>
+					<ssn:Accuracy rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_1">
+						<ssn:hasValue>
+							<DUL:Region rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_1_interval">
+								<weather:hasMeasurementPropertyMinValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_1_min_value">
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-1.6</DUL:hasDataValue>
+										<DUL:isClassifiedBy>
+											<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+										</DUL:isClassifiedBy>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMinValue>
+								<weather:hasMeasurementPropertyMaxValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_1_max_value">
+										<DUL:isClassifiedBy>
+											<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+										</DUL:isClassifiedBy>
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.6</DUL:hasDataValue>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMaxValue>
+							</DUL:Region>
+						</ssn:hasValue>
+					</ssn:Accuracy>
+				</ssn:hasMeasurementCapability>
+			</ssn:MeasurementCapability>
+		</ssn:hasMeasurementCapability>
+		<ssn:hasMeasurementCapability>
+			<ssn:MeasurementCapability rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#MeasurementCapability_37">
+				<ssn:forProperty rdf:resource="http://purl.oclc.org/NET/ssnx/weather-station/station#temperature"/>
+				<ssn:inCondition>
+					<ssn:MeasurementRange rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#TemperatureR_2">
+						<ssn:hasValue>
+							<DUL:Region rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#temperatureR_2_interval">
+								<weather:hasMeasurementPropertyMinValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#TemperatureR_2_min_value">
+										<DUL:isClassifiedBy rdf:resource="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</DUL:hasDataValue>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMinValue>
+								<weather:hasMeasurementPropertyMaxValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#TemperatureR_2_max_value">
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</DUL:hasDataValue>
+										<DUL:isClassifiedBy rdf:resource="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMaxValue>
+							</DUL:Region>
+						</ssn:hasValue>
+					</ssn:MeasurementRange>
+				</ssn:inCondition>
+				<ssn:hasMeasurementCapability>
+					<ssn:Accuracy rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_2">
+						<ssn:hasValue>
+							<DUL:Region rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_2_interval">
+								<weather:hasMeasurementPropertyMaxValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_2_max_value">
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4</DUL:hasDataValue>
+										<DUL:isClassifiedBy rdf:resource="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMaxValue>
+								<weather:hasMeasurementPropertyMinValue>
+									<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#accuracyR_2_min_value">
+										<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-0.8</DUL:hasDataValue>
+										<DUL:isClassifiedBy rdf:resource="http://purl.oclc.org/NET/ssnx/weather-station/station#Celsius"/>
+									</DUL:Amount>
+								</weather:hasMeasurementPropertyMinValue>
+							</DUL:Region>
+						</ssn:hasValue>
+					</ssn:Accuracy>
+				</ssn:hasMeasurementCapability>
+			</ssn:MeasurementCapability>
+		</ssn:hasMeasurementCapability>
+		<ssn:onPlatform>
+			<ssn:Platform rdf:about="http://purl.oclc.org/NET/ssnx/weather-station/station#System_AGTC1">
+				<ssn:attachedSystem rdf:resource="http://purl.oclc.org/NET/ssnx/weather-station/station#Sensor_HMP50"/>
+			</ssn:Platform>
+		</ssn:onPlatform>
+	</ssn:SensingDevice>
+</rdf:RDF>
+<!-- Created with Protege (with OWL Plugin 3.4.4, Build 579)  http://protege.stanford.edu -->
