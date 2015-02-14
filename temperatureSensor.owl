@@ -778,14 +778,14 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
         <rdfs:subClassOf rdf:resource="&ssn;DeploymentRelatedProcess"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;deployedSystem"/>
-                <owl:allValuesFrom rdf:resource="&ssn;System"/>
+                <owl:onProperty rdf:resource="&ssn;deployedOnPlatform"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Platform"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;deployedOnPlatform"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Platform"/>
+                <owl:onProperty rdf:resource="&ssn;deployedSystem"/>
+                <owl:allValuesFrom rdf:resource="&ssn;System"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source>skos:closeMatch &apos;Deployment&apos; [MMI Dev]
@@ -864,6 +864,12 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
         <rdfs:label>Feature of Interest</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasProperty"/>
+                <owl:someValuesFrom rdf:resource="&ssn;Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&DUL;Event"/>
@@ -875,12 +881,6 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;hasProperty"/>
                 <owl:allValuesFrom rdf:resource="&ssn;Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;hasProperty"/>
-                <owl:someValuesFrom rdf:resource="&ssn;Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy>http://purl.oclc.org/NET/ssnx/ssn</rdfs:isDefinedBy>
@@ -954,14 +954,14 @@ Note that, given the DUL modelling of Qualities, a sensor defined with &apos;obs
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;forProperty"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Property"/>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Condition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;inCondition"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Condition"/>
+                <owl:onProperty rdf:resource="&ssn;forProperty"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source>Similar idea to MeasurementCapability in MMI Device Ontology
@@ -1013,26 +1013,6 @@ The conditions specified here are those that affect the measurement properties, 
         <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;observedProperty"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;observedBy"/>
-                <owl:onClass rdf:resource="&ssn;Sensor"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;featureOfInterest"/>
-                <owl:onClass rdf:resource="&ssn;FeatureOfInterest"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;observedBy"/>
                 <owl:allValuesFrom rdf:resource="&ssn;Sensor"/>
             </owl:Restriction>
@@ -1045,15 +1025,21 @@ The conditions specified here are those that affect the measurement properties, 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;sensingMethodUsed"/>
-                <owl:onClass rdf:resource="&ssn;Sensing"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="&ssn;observedProperty"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;observationSamplingTime"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+                <owl:onProperty rdf:resource="&ssn;sensingMethodUsed"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Sensing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;featureOfInterest"/>
+                <owl:onClass rdf:resource="&ssn;FeatureOfInterest"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1065,20 +1051,22 @@ The conditions specified here are those that affect the measurement properties, 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;sensingMethodUsed"/>
+                <owl:onClass rdf:resource="&ssn;Sensing"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;observationResult"/>
                 <owl:allValuesFrom rdf:resource="&ssn;SensorOutput"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;featureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="&ssn;FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;observationResultTime"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+                <owl:onProperty rdf:resource="&ssn;observedBy"/>
+                <owl:onClass rdf:resource="&ssn;Sensor"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1089,8 +1077,20 @@ The conditions specified here are those that affect the measurement properties, 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;sensingMethodUsed"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Sensing"/>
+                <owl:onProperty rdf:resource="&ssn;featureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="&ssn;FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;observationSamplingTime"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;observationResultTime"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source>skos:closeMatch &apos;observation&apos; [O&amp;M] 
@@ -1170,14 +1170,14 @@ O&amp;M conflates what we have as SensorOutput and ObservationValue into observa
         <rdfs:subClassOf rdf:resource="&ssn;Property"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;inCondition"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Condition"/>
+                <owl:onProperty rdf:resource="&ssn;hasOperatingProperty"/>
+                <owl:allValuesFrom rdf:resource="&ssn;OperatingProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;hasOperatingProperty"/>
-                <owl:allValuesFrom rdf:resource="&ssn;OperatingProperty"/>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Condition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source>skos:broaderMatch &apos;reference operating condition&apos; [VIM 4.11]
@@ -1250,12 +1250,6 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
         <rdfs:subClassOf rdf:resource="&DUL;Method"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;hasInput"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Input"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;hasOutput"/>
                 <owl:allValuesFrom rdf:resource="&ssn;Output"/>
             </owl:Restriction>
@@ -1264,6 +1258,12 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;hasOutput"/>
                 <owl:someValuesFrom rdf:resource="&ssn;Output"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasInput"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Input"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#Process</rdfs:seeAlso>
@@ -1384,8 +1384,8 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
         <rdfs:subClassOf rdf:resource="&DUL;PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;observes"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Property"/>
+                <owl:onProperty rdf:resource="&ssn;implements"/>
+                <owl:someValuesFrom rdf:resource="&ssn;Sensing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1402,8 +1402,8 @@ The difference is that here we also allow for qualities that aren&apos;t VIM inf
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;implements"/>
-                <owl:someValuesFrom rdf:resource="&ssn;Sensing"/>
+                <owl:onProperty rdf:resource="&ssn;observes"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A sensor can do (implements) sensing: that is, a sensor is any entity that can follow a sensing method and thus observe some Property of a FeatureOfInterest.  Sensors may be physical devices, computational methods, a laboratory setup with a person following a method, or any other thing that can follow a Sensing Method to observe a Property.</rdfs:comment>
@@ -1517,14 +1517,14 @@ See comments at ObservationValue.</dc:source>
         <rdfs:subClassOf rdf:resource="&ssn;Property"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;hasSurvivalProperty"/>
-                <owl:allValuesFrom rdf:resource="&ssn;SurvivalProperty"/>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Condition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;inCondition"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Condition"/>
+                <owl:onProperty rdf:resource="&ssn;hasSurvivalProperty"/>
+                <owl:allValuesFrom rdf:resource="&ssn;SurvivalProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The conditions a sensor can be exposed to without damage: i.e., the sensor continues to operate as defined using MeasurementCapability.  If, however, the SurvivalRange is exceeded, the sensor is &apos;damaged&apos; and MeasurementCapability specifications may no longer hold.</rdfs:comment>
@@ -1543,12 +1543,6 @@ See comments at ObservationValue.</dc:source>
         <rdfs:subClassOf rdf:resource="&DUL;PhysicalObject"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;hasSurvivalRange"/>
-                <owl:allValuesFrom rdf:resource="&ssn;SurvivalRange"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;onPlatform"/>
                 <owl:allValuesFrom rdf:resource="&ssn;Platform"/>
             </owl:Restriction>
@@ -1561,14 +1555,20 @@ See comments at ObservationValue.</dc:source>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ssn;hasDeployment"/>
-                <owl:allValuesFrom rdf:resource="&ssn;Deployment"/>
+                <owl:onProperty rdf:resource="&ssn;hasSurvivalRange"/>
+                <owl:allValuesFrom rdf:resource="&ssn;SurvivalRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ssn;hasSubSystem"/>
                 <owl:allValuesFrom rdf:resource="&ssn;System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasDeployment"/>
+                <owl:allValuesFrom rdf:resource="&ssn;Deployment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1654,6 +1654,25 @@ See comments at ObservationValue.</dc:source>
     <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Situation -->
 
     <owl:Class rdf:about="&DUL;Situation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor_HMP50 -->
+
+    <owl:NamedIndividual rdf:about="&ssn;Sensor_HMP50">
+        <rdf:type rdf:resource="&ssn;SensingDevice"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
