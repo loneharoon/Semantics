@@ -1,0 +1,13 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-74#
+
+[SourceDeclaration]
+sourceUri	details
+connectionUrl	jdbc:h2:tcp://localhost/books;DATABASE_TO_UPPER=FALSE
+username	sa
+password	
+driverClass	org.h2.Driver
+
+[MappingDeclaration] @collection [[
+]]
+
