@@ -9,5 +9,16 @@ password
 driverClass	org.h2.Driver
 
 [MappingDeclaration] @collection [[
+mappingId	MAPID-fdb7ac59cdd84f59bd1712966c066741
+target		:Person-{pid} a :Person . 
+source		select pid from person
+
+mappingId	MAPID-228d2f6283f148e3a47d9cd2348c87f5
+target		:Person-{pid_1} :saysHello :Person-{pid_2} . 
+source		select "pid_1" ,"pid_2" from "says_hello"
+
+mappingId	MAPID-ae40377f7cb14c919f9946910bcee2fa
+target		:Person-{pid} :fullName {fullName} . 
+source		select "pid", "full_name" from "person"
 ]]
 
