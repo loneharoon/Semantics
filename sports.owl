@@ -12,11 +12,11 @@
 
 <rdf:RDF xmlns="https://github.com/loneharoon/Semantics/blob/master/sports.owl#"
      xml:base="https://github.com/loneharoon/Semantics/blob/master/sports.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:sports="https://github.com/loneharoon/Semantics/blob/master/sports.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="https://github.com/loneharoon/Semantics/blob/master/sports.owl"/>
     
 
@@ -38,6 +38,26 @@
         <rdfs:range rdf:resource="&sports;FavouriteSport"/>
         <rdfs:domain rdf:resource="&sports;Person"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/loneharoon/Semantics/blob/master/sports.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&sports;hasName">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&sports;Student"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -128,6 +148,7 @@
 
     <owl:NamedIndividual rdf:about="&sports;Student1">
         <rdf:type rdf:resource="&sports;Student"/>
+        <hasName>Haroon</hasName>
         <hasFavouriteSport rdf:resource="&sports;Rugby"/>
     </owl:NamedIndividual>
     
