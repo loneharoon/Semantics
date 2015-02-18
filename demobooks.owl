@@ -123,6 +123,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/demobooks#Germany">
         <rdf:type rdf:resource="http://www.semanticweb.org/demobooks#PLace"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/demobooks#Essence_of_logic"/>
+        <livedIn rdf:resource="http://www.semanticweb.org/demobooks#Germany"/>
     </owl:NamedIndividual>
     
 
