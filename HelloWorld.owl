@@ -36,6 +36,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#ref-pid_1_pid_2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#ref-pid_1_pid_2"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -59,6 +65,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person#full_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person#full_name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person#pid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person#pid"/>
+    
+
+
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#id"/>
+    
+
+
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#pid_1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#pid_1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#pid_2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#pid_2"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -73,6 +109,18 @@
     <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello"/>
 </rdf:RDF>
 
 

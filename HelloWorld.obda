@@ -20,5 +20,21 @@ source		select "pid_1" ,"pid_2" from "says_hello"
 mappingId	MAPID-ae40377f7cb14c919f9946910bcee2fa
 target		:Person-{pid} :fullName {fullName} . 
 source		select "pid", "full_name" from "person"
+
+mappingId	MAPPING-ID4
+target		<http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person/pid={pid}> a <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person> ; <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person#pid> {pid} ; <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person#full_name> {full_name} . 
+source		SELECT * FROM "person"
+
+mappingId	MAPPING-ID5
+target		<http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello/id={id}> a <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello> ; <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#id> {id}^^xsd:integer ; <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#pid_1> {pid_1} ; <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#pid_2> {pid_2} . 
+source		SELECT * FROM "says_hello"
+
+mappingId	MAPPING-ID6
+target		<http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello/id={says_hello_id}> <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#ref-pid_1_pid_2> <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person/pid={person_pid}> . 
+source		SELECT "says_hello"."id" AS says_hello_id, "person"."pid" AS person_pid FROM "says_hello", "person" WHERE "says_hello"."pid_2" = "person"."pid"
+
+mappingId	MAPPING-ID7
+target		<http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello/id={says_hello_id}> <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/says_hello#ref-pid_1_pid_2> <http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72/person/pid={person_pid}> . 
+source		SELECT "says_hello"."id" AS says_hello_id, "person"."pid" AS person_pid FROM "says_hello", "person" WHERE "says_hello"."pid_1" = "person"."pid"
 ]]
 
