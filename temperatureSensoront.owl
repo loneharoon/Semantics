@@ -22,6 +22,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/tempsensor#onDatec -->
+
+    <owl:AnnotationProperty rdf:about="http://www.example.com/tempsensor#onDatec"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +83,7 @@
     <owl:DatatypeProperty rdf:about="http://www.example.com/tempsensor#onDate">
         <rdfs:comment>date on which measurement was done</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
-        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -84,9 +101,7 @@
 
     <!-- http://www.example.com/tempsensor#OnDate -->
 
-    <owl:Class rdf:about="http://www.example.com/tempsensor#OnDate">
-        <rdfs:comment>represents data on which readings were taken</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/tempsensor#OnDate"/>
     
 
 
@@ -113,6 +128,66 @@
     <owl:Class rdf:about="http://www.example.com/tempsensor#Temperature">
         <rdfs:comment>this class represents different temperature measurements taken</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/tempsensor#AB1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/tempsensor#AB1"/>
+    
+
+
+    <!-- http://www.example.com/tempsensor#AB2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/tempsensor#AB2"/>
+    
+
+
+    <!-- http://www.example.com/tempsensor#AB3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/tempsensor#AB3"/>
+    
+
+
+    <!-- http://www.example.com/tempsensor#ind1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/tempsensor#ind1">
+        <onDatec rdf:datatype="&xsd;integer">1112014</onDatec>
+        <onDate rdf:datatype="&xsd;integer">1112014</onDate>
+        <measures rdf:datatype="&xsd;integer">13</measures>
+        <locatedIn rdf:resource="http://www.example.com/tempsensor#AB1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/tempsensor#ind2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/tempsensor#ind2">
+        <onDate rdf:datatype="&xsd;integer">1212014</onDate>
+        <measures rdf:datatype="&xsd;integer">14</measures>
+        <locatedIn rdf:resource="http://www.example.com/tempsensor#AB2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/tempsensor#ind3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/tempsensor#ind3">
+        <onDate rdf:datatype="&xsd;integer">1312014</onDate>
+        <measures rdf:datatype="&xsd;integer">15</measures>
+        <locatedIn rdf:resource="http://www.example.com/tempsensor#AB3"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
