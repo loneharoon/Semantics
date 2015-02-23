@@ -51,6 +51,15 @@
     
 
 
+    <!-- http://www.example.com/tempsensor#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/tempsensor#hasUnit">
+        <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.example.com/tempsensor#measures -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.com/tempsensor#measures">
@@ -66,7 +75,7 @@
     <owl:DatatypeProperty rdf:about="http://www.example.com/tempsensor#onDate">
         <rdfs:comment>date on which measurement was done</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
-        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -113,6 +122,12 @@
     <owl:Class rdf:about="http://www.example.com/tempsensor#Temperature">
         <rdfs:comment>this class represents different temperature measurements taken</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.example.com/tempsensor#Unit -->
+
+    <owl:Class rdf:about="http://www.example.com/tempsensor#Unit"/>
 </rdf:RDF>
 
 
