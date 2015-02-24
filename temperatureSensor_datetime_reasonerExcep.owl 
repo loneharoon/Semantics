@@ -1,0 +1,273 @@
+<rdf:RDF
+    xmlns="http://www.example.com/tempsensor#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind23">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">285</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-02T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind8">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T06:30:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind25">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind11">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-01T00:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#Delhi">
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind21">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">284</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-01T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind6">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T03:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind3">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-02T02:20:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind1">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-01T00:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind13">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-02T02:20:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind29">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">292</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind19">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T07:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind4">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-02T03:20:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind27">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">294</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind17">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T05:20:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#OnDate">
+    <rdfs:comment>represents data on which readings were taken</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#Kolkata">
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind15">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T10:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind9">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T07:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#Place">
+    <rdfs:comment>place from where measurements are taken</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind22">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">285</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-01T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind24">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-02T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#measures">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+    <rdfs:comment>represents the temperature value</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind20">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#locatedIn">
+    <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+    <rdfs:range rdf:resource="http://www.example.com/tempsensor#Place"/>
+    <rdfs:comment>It relates sensor to its place of deployment</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#TempSensor">
+    <rdfs:comment rdf:resource="http://www.example.com/tempsensor"/>
+    <rdfs:comment>Represents the sensor used for measurements</rdfs:comment>
+    <rdfs:label>TempSensor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind10">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#Mumbai">
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind2">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-01T01:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind12">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-01T01:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#onDate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+    <rdfs:comment>date on which measurement was done</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind7">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T05:20:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind28">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">291</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind14">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-02T03:20:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind26">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind5">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T10:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Delhi"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind18">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T06:30:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind30">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelvin</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">292</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-04T08:40:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Mumbai"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#Temperature">
+    <rdfs:comment>this class represents different temperature measurements taken</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#ind16">
+    <hasUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celsius</hasUnit>
+    <measures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</measures>
+    <onDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-03T03:10:10</onDate>
+    <locatedIn rdf:resource="http://www.example.com/tempsensor#Kolkata"/>
+    <rdf:type rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.com/tempsensor#hasUnit">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.example.com/tempsensor#TempSensor"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>
