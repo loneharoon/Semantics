@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn#" >
+    <!ENTITY geosparql "http://www.opengis.net/ont/geosparql#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.exampleMarkusStocker.com#"
+     xml:base="http://www.exampleMarkusStocker.com"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.exampleMarkusStocker.com">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#Anemometer -->
+
+    <owl:Class rdf:about="http://www.exampleMarkusStocker.com#Anemometer">
+        <rdfs:subClassOf rdf:resource="&ssn;SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#CampbellScientific_CSAT3 -->
+
+    <owl:Class rdf:about="http://www.exampleMarkusStocker.com#CampbellScientific_CSAT3">
+        <rdfs:subClassOf rdf:resource="http://www.exampleMarkusStocker.com#SonicAnemometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#InfraredGasAnalyzer -->
+
+    <owl:Class rdf:about="http://www.exampleMarkusStocker.com#InfraredGasAnalyzer">
+        <rdfs:subClassOf rdf:resource="&ssn;SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#LI-COR_LI-7500 -->
+
+    <owl:Class rdf:about="http://www.exampleMarkusStocker.com#LI-COR_LI-7500">
+        <rdfs:subClassOf rdf:resource="http://www.exampleMarkusStocker.com#InfraredGasAnalyzer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#SonicAnemometer -->
+
+    <owl:Class rdf:about="http://www.exampleMarkusStocker.com#SonicAnemometer">
+        <rdfs:subClassOf rdf:resource="http://www.exampleMarkusStocker.com#Anemometer"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#S01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#S01">
+        <rdf:type rdf:resource="&ssn;SensorOutput"/>
+        <ssn:hasValue rdf:resource="http://www.exampleMarkusStocker.com#ov1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#S012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#S012">
+        <rdf:type rdf:resource="&ssn;SensorOutput"/>
+        <ssn:hasValue rdf:resource="http://www.exampleMarkusStocker.com#ov12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#aTempRegion -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#aTempRegion">
+        <rdf:type rdf:resource="&DUL;Region"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;string">-25 +50 C</DUL:hasRegionDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#ambientAir -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#ambientAir">
+        <rdf:type rdf:resource="&ssn;FeatureOfInterest"/>
+        <ssn:hasProperty rdf:resource="http://www.exampleMarkusStocker.com#massFractionCo2"/>
+        <ssn:hasProperty rdf:resource="http://www.exampleMarkusStocker.com#massFractionH2o"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#massFractionCo2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#massFractionCo2">
+        <rdf:type rdf:resource="&ssn;Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#massFractionH2o -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#massFractionH2o">
+        <rdf:type rdf:resource="&ssn;Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#ob1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#ob1">
+        <rdf:type rdf:resource="&ssn;Observation"/>
+        <ssn:observationResult rdf:resource="http://www.exampleMarkusStocker.com#S01"/>
+        <ssn:observationResult rdf:resource="http://www.exampleMarkusStocker.com#S012"/>
+        <ssn:featureOfInterest rdf:resource="http://www.exampleMarkusStocker.com#ambientAir"/>
+        <ssn:observedProperty rdf:resource="http://www.exampleMarkusStocker.com#massFractionCo2"/>
+        <ssn:observedProperty rdf:resource="http://www.exampleMarkusStocker.com#massFractionH2o"/>
+        <ssn:observationResultTime rdf:resource="http://www.exampleMarkusStocker.com#rt1"/>
+        <ssn:observedBy rdf:resource="http://www.exampleMarkusStocker.com#theLinnansuoLI-7500"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#ov1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#ov1">
+        <rdf:type rdf:resource="&ssn;ObservationValue"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;double">389.6</DUL:hasRegionDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#ov12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#ov12">
+        <rdf:type rdf:resource="&ssn;ObservationValue"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;double">7.1379</DUL:hasRegionDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#rt1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#rt1">
+        <rdf:type rdf:resource="&DUL;TimeInterval"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;dateTime">2012-03-24T02:00:00.000</DUL:hasRegionDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#theLi-7500TempOperatingRange -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#theLi-7500TempOperatingRange">
+        <rdf:type rdf:resource="&ssn;OperatingRange"/>
+        <DUL:hasRegion rdf:resource="http://www.exampleMarkusStocker.com#aTempRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#theLinnansuoCSAT3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#theLinnansuoCSAT3">
+        <rdf:type rdf:resource="http://www.exampleMarkusStocker.com#CampbellScientific_CSAT3"/>
+        <ssn:onPlatform rdf:resource="http://www.exampleMarkusStocker.com#theLinnansuoTower"/>
+        <ssn:observes rdf:resource="http://www.exampleMarkusStocker.com#windSpeed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#theLinnansuoLI-7500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#theLinnansuoLI-7500">
+        <rdf:type rdf:resource="http://www.exampleMarkusStocker.com#LI-COR_LI-7500"/>
+        <ssn:observes rdf:resource="http://www.exampleMarkusStocker.com#massFractionCo2"/>
+        <ssn:observes rdf:resource="http://www.exampleMarkusStocker.com#massFractionH2o"/>
+        <ssn:hasOperatingRange rdf:resource="http://www.exampleMarkusStocker.com#theLi-7500TempOperatingRange"/>
+        <ssn:onPlatform rdf:resource="http://www.exampleMarkusStocker.com#theLinnansuoTower"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#theLinnansuoTower -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#theLinnansuoTower">
+        <rdf:type rdf:resource="&ssn;Platform"/>
+        <ssn:observes rdf:resource="http://www.exampleMarkusStocker.com#massFractionCo2"/>
+        <DUL:hasLocation rdf:resource="http://www.exampleMarkusStocker.com#theTowerLocation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#theTowerLocation -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#theTowerLocation">
+        <rdf:type rdf:resource="&DUL;PhysicalPlace"/>
+        <rdf:type rdf:resource="&geosparql;Feature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.exampleMarkusStocker.com#windSpeed -->
+
+    <owl:NamedIndividual rdf:about="http://www.exampleMarkusStocker.com#windSpeed">
+        <rdf:type rdf:resource="&ssn;Property"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

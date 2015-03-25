@@ -1,0 +1,1175 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY www "http://www.windsensorHaroon.com#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.windsensorHaroon.com#"
+     xml:base="http://www.windsensorHaroon.com"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:www="http://www.windsensorHaroon.com#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.windsensorHaroon.com">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu-rec20"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.windsensorHaroon.com#unitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="&www;unitOfMeasure">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isParametrizedBy"/>
+        <owl:inverseOf rdf:resource="&www;unitOfMeaureFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#unitOfMeaureFor -->
+
+    <owl:ObjectProperty rdf:about="&www;unitOfMeaureFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#parametrizes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.windsensorHaroon.com#hasRangeMaxValue -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasRangeMaxValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#hasRangeMaxValueExclusive -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasRangeMaxValueExclusive">
+        <rdfs:subPropertyOf rdf:resource="&www;hasRangeMaxValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#hasRangeMaxValueInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasRangeMaxValueInclusive">
+        <rdfs:subPropertyOf rdf:resource="&www;hasRangeMaxValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#hasRangeMinValue -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasRangeMinValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#hasRangeMinValueExclusive -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasRangeMinValueExclusive">
+        <rdfs:subPropertyOf rdf:resource="&www;hasRangeMinValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#hasRangeMinValueInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasRangeMinValueInclusive">
+        <rdfs:subPropertyOf rdf:resource="&www;hasRangeMinValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#sensingDescription -->
+
+    <owl:DatatypeProperty rdf:about="&www;sensingDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">
+        <rdfs:subClassOf rdf:resource="&ssn;Property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#Damping_ratio -->
+
+    <owl:Class rdf:about="&www;Damping_ratio">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#Delay_Distance -->
+
+    <owl:Class rdf:about="&www;Delay_Distance">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#Distance_constant -->
+
+    <owl:Class rdf:about="&www;Distance_constant">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#Overshoot_ratio -->
+
+    <owl:Class rdf:about="&www;Overshoot_ratio">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#Starting_Threshold -->
+
+    <owl:Class rdf:about="&www;Starting_Threshold">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#Transducer_output -->
+
+    <owl:Class rdf:about="&www;Transducer_output">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#VaisalaWM30 -->
+
+    <owl:Class rdf:about="&www;VaisalaWM30">
+        <rdfs:subClassOf rdf:resource="&ssn;SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasOperatingRange"/>
+                <owl:allValuesFrom rdf:resource="&www;WM30_operatingRange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="&www;wm30_windDirection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;observes"/>
+                <owl:someValuesFrom rdf:resource="&www;WindSpeed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="&www;wm30_windspeed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;observes"/>
+                <owl:someValuesFrom rdf:resource="&www;WindDirection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasSurvivalRange"/>
+                <owl:allValuesFrom rdf:resource="&www;WM30_SurvivalRange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#ValueRange -->
+
+    <owl:Class rdf:about="&www;ValueRange">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WM30_SurvivalRange -->
+
+    <owl:Class rdf:about="&www;WM30_SurvivalRange">
+        <rdfs:subClassOf rdf:resource="&ssn;SurvivalRange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">65.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-60.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WM30_WindDirection_MeasurementCapability_WMS301 -->
+
+    <owl:Class rdf:about="&www;WM30_WindDirection_MeasurementCapability_WMS301">
+        <rdfs:subClassOf rdf:resource="&www;WS30_WindDirection_MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;MeasurementRange"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeUnitOfAngle"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">355.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WM30_WindDirection_MeasurementCapability_WMS302 -->
+
+    <owl:Class rdf:about="&www;WM30_WindDirection_MeasurementCapability_WMS302">
+        <rdfs:subClassOf rdf:resource="&www;WS30_WindDirection_MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;MeasurementRange"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeUnitOfAngle"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">360.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WM30_WindSpeedMeasurementCapability_WSgrt10ms -->
+
+    <owl:Class rdf:about="&www;WM30_WindSpeedMeasurementCapability_WSgrt10ms">
+        <rdfs:subClassOf rdf:resource="&www;WS30_WindSpeed_MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;WindSpeed"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">60.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">10.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#percent"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">2.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-2.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WM30_WindSpeedMeasurementCapability_WSless10ms -->
+
+    <owl:Class rdf:about="&www;WM30_WindSpeedMeasurementCapability_WSless10ms">
+        <rdfs:subClassOf rdf:resource="&www;WS30_WindSpeed_MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.3</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-0.3</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;WindSpeed"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">10.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.4</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WM30_operatingRange -->
+
+    <owl:Class rdf:about="&www;WM30_operatingRange">
+        <rdfs:subClassOf rdf:resource="&ssn;OperatingRange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;inCondition"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">55.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-40.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasOperatingProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;OperatingPowerRange"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#volt"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">15.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">3.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WMS301 -->
+
+    <owl:Class rdf:about="&www;WMS301">
+        <rdfs:subClassOf rdf:resource="&www;wm30_windDirection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementCapability"/>
+                <owl:someValuesFrom rdf:resource="&www;WM30_WindDirection_MeasurementCapability_WMS301"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&www;WMS302"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WMS302 -->
+
+    <owl:Class rdf:about="&www;WMS302">
+        <rdfs:subClassOf rdf:resource="&www;wm30_windDirection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementCapability"/>
+                <owl:someValuesFrom rdf:resource="&www;WM30_WindDirection_MeasurementCapability_WMS302"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WS30_WindDirection_MeasurementCapability -->
+
+    <owl:Class rdf:about="&www;WS30_WindDirection_MeasurementCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeUnitOfAngle"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">3.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-3.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Delay_Distance"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metre"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;double">0.6</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Damping_ratio"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;double">0.3</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Starting_Threshold"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;double">1.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Overshoot_ratio"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;double">0.4</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WS30_WindSpeed_MeasurementCapability -->
+
+    <owl:Class rdf:about="&www;WS30_WindSpeed_MeasurementCapability">
+        <rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Distance_constant"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metre"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ssn;MeasurementRange"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">60.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.5</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Starting_Threshold"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;hasRangeMaxValueExclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.4</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;Transducer_output"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#hertz"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">1.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ssn;hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.7</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WindDirection -->
+
+    <owl:Class rdf:about="&www;WindDirection">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#Angle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="&www;windFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#WindSpeed -->
+
+    <owl:Class rdf:about="&www;WindSpeed">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="&www;windFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#windFeature -->
+
+    <owl:Class rdf:about="&www;windFeature">
+        <rdfs:subClassOf rdf:resource="&ssn;FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasProperty"/>
+                <owl:someValuesFrom rdf:resource="&www;WindDirection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasProperty"/>
+                <owl:someValuesFrom rdf:resource="&www;WindSpeed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#wm30_sensing -->
+
+    <owl:Class rdf:about="&www;wm30_sensing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;wm30_CharacteristicTransferFunction"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&ssn;Sensing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#wm30_windDirection -->
+
+    <owl:Class rdf:about="&www;wm30_windDirection">
+        <rdfs:subClassOf rdf:resource="&ssn;Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;observes"/>
+                <owl:someValuesFrom rdf:resource="&www;WindDirection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&www;WMS301"/>
+                    <rdf:Description rdf:about="&www;WMS302"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.windsensorHaroon.com#wm30_windspeed -->
+
+    <owl:Class rdf:about="&www;wm30_windspeed">
+        <rdfs:subClassOf rdf:resource="&ssn;Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;observes"/>
+                <owl:someValuesFrom rdf:resource="&www;WindSpeed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementCapability"/>
+                <owl:someValuesFrom rdf:resource="&www;WM30_WindSpeedMeasurementCapability_WSgrt10ms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;implements"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&www;wm30_CharacteristicTransferFunction"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ssn;hasMeasurementCapability"/>
+                <owl:someValuesFrom rdf:resource="&www;WM30_WindSpeedMeasurementCapability_WSless10ms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.windsensorHaroon.com#wm30_CharacteristicTransferFunction -->
+
+    <owl:NamedIndividual rdf:about="&www;wm30_CharacteristicTransferFunction">
+        <rdf:type rdf:resource="&www;wm30_sensing"/>
+        <sensingDescription rdf:datatype="&xsd;string">U= -0.24 + 0.699 X F</sensingDescription>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/qu/qu-rec20" uri="qu-rec20.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql" uri="geosparql_vocab_all.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/sf" uri="http://www.opengis.net/ont/sf"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/sf" uri="simple_features_geometries.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql" uri="geosparql_vocab_all.rdf"/>
     <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/qu/qu" uri="qu.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/ssn" uri="ssn2.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="file:/Users/haroonr/github-loneharoon/Semantics/qu.owl" uri="qu.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="http://purl.oclc.org/NET/ssnx/meteo/WM30" uri="wm30.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn2.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="duplicate:http://www.example.com/tempsensor" uri="temperatureSensor.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="duplicate:http://www.example.com/tempsensor" uri="temperatureSensoront.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="http://www.loa-cnr.it/ontologies/DUL.owl" uri="DUL.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="http://www.semanticweb.org/demobooks" uri="demobooks.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72" uri="HelloWorld.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-74" uri="books.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="https://github.com/loneharoon/Semantics/blob/master/academics.owl" uri="academics.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="https://github.com/loneharoon/Semantics/blob/master/sports.owl" uri="sports.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl" uri="WeatherOntology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1424624046923" name="shadowed:https://github.com/loneharoon/Semantics/blob/master/sports.owl" uri="MAVEN-PROJECTS/OntologogyClass/Ontologies/sports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="file:/Users/haroonr/github-loneharoon/Semantics/qu.owl" uri="qu.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://purl.oclc.org/NET/ssnx/meteo/WM30" uri="wm30.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="duplicate:http://purl.oclc.org/NET/ssnx/ssn" uri="ssn2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="duplicate:http://www.example.com/tempsensor" uri="temperatureSensor_datetime.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="duplicate:http://www.example.com/tempsensor" uri="temperatureSensoront.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.exampleMarkusHaroon.com" uri="implementedmarkusHaroon.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.exampleMarkusStocker.com" uri="exampleMarkusStocker.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.loa-cnr.it/ontologies/DUL.owl" uri="DUL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="duplicate:http://www.opengis.net/ont/geosparql" uri="geosparql_vocab_all.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="duplicate:http://www.opengis.net/ont/geosparql" uri="geosparql_vocab_all.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.opengis.net/ont/sf" uri="simple_features_geometries.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.semanticweb.org/demobooks" uri="demobooks.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-72" uri="HelloWorld.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.semanticweb.org/haroonr/ontologies/2015/1/untitled-ontology-74" uri="books.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="http://www.windsensorHaroon.com" uri="windsensorHaroon.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="https://github.com/loneharoon/Semantics/blob/master/academics.owl" uri="academics.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="https://github.com/loneharoon/Semantics/blob/master/sports.owl" uri="sports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl" uri="WeatherOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1427291899445" name="shadowed:https://github.com/loneharoon/Semantics/blob/master/sports.owl" uri="MAVEN-PROJECTS/OntologogyClass/Ontologies/sports.owl"/>
     </group>
 </catalog>
