@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.unideployHaroon.com#"
+     xml:base="http://www.unideployHaroon.com"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.unideployHaroon.com">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu-rec20"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#Unit -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Unit">
+        <rdfs:subClassOf rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.unideployHaroon.com#ABC01Platform -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#ABC01Platform">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Deployment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#deployedSystem"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#SN-Node-TSB-ABC01"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#deployedOnPlatform"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#UNIS-TSBPlatfom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#HumiditySensor-TSB-ABC01 -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#HumiditySensor-TSB-ABC01">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#TSB_HumidityMeasurementCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#NormalTSBTemperature -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#NormalTSBTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#SN-Node-TSB-ABC01 -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#SN-Node-TSB-ABC01">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.unideployHaroon.com#HumiditySensor-TSB-ABC01"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                        <owl:someValuesFrom rdf:resource="http://www.unideployHaroon.com#TemperatureSensor-TSB-ABC01"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange"/>
+                <owl:someValuesFrom rdf:resource="http://www.unideployHaroon.com#TSBOperatingPowerRange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#UNIS-TSBPlatfom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasDeployment"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#ABC01Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TSBHumidity -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TSBHumidity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#Concentration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TSBNormalOpeatingCondition -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TSBNormalOpeatingCondition">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Condition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.unideployHaroon.com#NormalTSBTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TSBOperatingPowerRange -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TSBOperatingPowerRange">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#microampere"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
+                                <owl:hasValue rdf:datatype="&xsd;float">21.0</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TSBTemperature -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TSBTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TSB_HumidityMeasurementCapability -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TSB_HumidityMeasurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#TSBHumidity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#humidity"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;double">3.5</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TSB_TemperatueMeaurementCapability -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TSB_TemperatueMeaurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.unideployHaroon.com#TSBNormalOpeatingCondition"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;string">25</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
+                                                <owl:hasValue rdf:datatype="&xsd;double">0.5</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#TSBTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#TemperatureSensor-TSB-ABC01 -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#TemperatureSensor-TSB-ABC01">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#TSB_TemperatueMeaurementCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unideployHaroon.com#UNIS-TSBPlatfom -->
+
+    <owl:Class rdf:about="http://www.unideployHaroon.com#UNIS-TSBPlatfom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation"/>
+                <owl:hasValue rdf:resource="http://www.unideployHaroon.com#PhysicalPlace_UNISTestBed-BA03A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#attachedSystem"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#SN-Node-TSB-ABC01"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inDeployment"/>
+                <owl:allValuesFrom rdf:resource="http://www.unideployHaroon.com#ABC01Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.unideployHaroon.com#PhysicalPlace_UNISTestBed-BA03A -->
+
+    <owl:NamedIndividual rdf:about="http://www.unideployHaroon.com#PhysicalPlace_UNISTestBed-BA03A">
+        <rdf:type rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalPlace"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
