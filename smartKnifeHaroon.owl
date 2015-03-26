@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY www "http://www.smartknifeHaroon.com#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.smartknifeHaroon.com#"
+     xml:base="http://www.smartknifeHaroon.com"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:www="http://www.smartknifeHaroon.com#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.smartknifeHaroon.com">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu-rec20"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#unitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="&www;unitOfMeasure">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isParametrizedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#hasMeasurementPropertyMaxValue -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasMeasurementPropertyMaxValue">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegionDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#hasMeasurementPropertyMinValue -->
+
+    <owl:DatatypeProperty rdf:about="&www;hasMeasurementPropertyMinValue">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegionDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf"/>
+                <owl:someValuesFrom rdf:resource="&www;KnifeMovements"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&www;Value_region"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#accelerationDueToGravity"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#Unit -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Unit">
+        <rdfs:subClassOf rdf:resource="&DUL;UnitOfMeasure"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#AccelerationObservation -->
+
+    <owl:Class rdf:about="&www;AccelerationObservation">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#featureOfInterest"/>
+                <owl:allValuesFrom rdf:resource="&www;WitiltAcceleration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observationResult"/>
+                <owl:allValuesFrom rdf:resource="&www;AccelerationSensorOutput"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedProperty"/>
+                <owl:allValuesFrom rdf:resource="&www;WitiltAcceleration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
+                <owl:allValuesFrom rdf:resource="&www;WitiltAccelerometer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#AccelerationSensorOutput -->
+
+    <owl:Class rdf:about="&www;AccelerationSensorOutput">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                <owl:someValuesFrom rdf:resource="&www;WititObservationValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#isProducedBy"/>
+                <owl:someValuesFrom rdf:resource="&www;WitiltAccelerometer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#Knife-123 -->
+
+    <owl:Class rdf:about="&www;Knife-123">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#attachedSystem"/>
+                <owl:allValuesFrom rdf:resource="&www;WitiltAccelerometer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#KnifeMovements -->
+
+    <owl:Class rdf:about="&www;KnifeMovements">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="&www;WitiltAcceleration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#Value_region -->
+
+    <owl:Class rdf:about="&www;Value_region">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltAcceleration -->
+
+    <owl:Class rdf:about="&www;WitiltAcceleration">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltAccelerationMeasurementCapability -->
+
+    <owl:Class rdf:about="&www;WitiltAccelerationMeasurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+                <owl:onClass rdf:resource="&www;WititFrequencyRange"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+                <owl:onClass rdf:resource="&www;WitiltMeasurementRange"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
+                <owl:allValuesFrom rdf:resource="&www;WitiltAcceleration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltAccelerometer -->
+
+    <owl:Class rdf:about="&www;WitiltAccelerometer">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+                <owl:allValuesFrom rdf:resource="&www;WitiltAccelerationMeasurementCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+                <owl:allValuesFrom rdf:resource="&www;Knife-123"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltMeasurementRange -->
+
+    <owl:Class rdf:about="&www;WitiltMeasurementRange">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#accelerationDueToGravity"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WititFrequencyRange -->
+
+    <owl:Class rdf:about="&www;WititFrequencyRange">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Frequency"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&www;unitOfMeasure"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#hertz"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WititObservationValue -->
+
+    <owl:Class rdf:about="&www;WititObservationValue">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#CuttingObservation1 -->
+
+    <owl:NamedIndividual rdf:about="&www;CuttingObservation1">
+        <rdf:type rdf:resource="&www;AccelerationObservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiFrequenceFDegreeMode -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiFrequenceFDegreeMode">
+        <rdf:type rdf:resource="&www;WititFrequencyRange"/>
+        <DUL:hasDataValue rdf:datatype="&xsd;integer">50</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiFrequenceFRawADCMode -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiFrequenceFRawADCMode">
+        <rdf:type rdf:resource="&www;WititFrequencyRange"/>
+        <DUL:hasDataValue rdf:datatype="&xsd;integer">220</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiFrequencyBinaryMode -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiFrequencyBinaryMode">
+        <rdf:type rdf:resource="&www;WititFrequencyRange"/>
+        <DUL:hasDataValue rdf:datatype="&xsd;integer">610</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiFrequencyGravityMode -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiFrequencyGravityMode">
+        <rdf:type rdf:resource="&www;WititFrequencyRange"/>
+        <DUL:hasDataValue rdf:datatype="&xsd;integer">135</DUL:hasDataValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltmeasurementRange-1 -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiltmeasurementRange-1">
+        <rdf:type rdf:resource="&www;WitiltMeasurementRange"/>
+        <hasMeasurementPropertyMinValue rdf:datatype="&xsd;float">-1.5</hasMeasurementPropertyMinValue>
+        <hasMeasurementPropertyMaxValue rdf:datatype="&xsd;float">1.5</hasMeasurementPropertyMaxValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltmeasurementRange-2 -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiltmeasurementRange-2">
+        <rdf:type rdf:resource="&www;WitiltMeasurementRange"/>
+        <hasMeasurementPropertyMinValue rdf:datatype="&xsd;float">-2.0</hasMeasurementPropertyMinValue>
+        <hasMeasurementPropertyMaxValue rdf:datatype="&xsd;float">2.0</hasMeasurementPropertyMaxValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltmeasurementRange-3 -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiltmeasurementRange-3">
+        <rdf:type rdf:resource="&www;WitiltMeasurementRange"/>
+        <hasMeasurementPropertyMinValue rdf:datatype="&xsd;float">-4.0</hasMeasurementPropertyMinValue>
+        <hasMeasurementPropertyMaxValue rdf:datatype="&xsd;float">4.0</hasMeasurementPropertyMaxValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.smartknifeHaroon.com#WitiltmeasurementRange-4 -->
+
+    <owl:NamedIndividual rdf:about="&www;WitiltmeasurementRange-4">
+        <rdf:type rdf:resource="&www;WitiltMeasurementRange"/>
+        <hasMeasurementPropertyMinValue rdf:datatype="&xsd;float">-6.0</hasMeasurementPropertyMinValue>
+        <hasMeasurementPropertyMaxValue rdf:datatype="&xsd;float">6.0</hasMeasurementPropertyMaxValue>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
