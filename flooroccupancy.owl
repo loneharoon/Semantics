@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY flooroccupancy "http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#"
+     xml:base="http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:flooroccupancy="http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#deployedIn -->
+
+    <owl:ObjectProperty rdf:about="&flooroccupancy;deployedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Building -->
+
+    <owl:Class rdf:about="&flooroccupancy;Building">
+        <owl:equivalentClass rdf:resource="&flooroccupancy;Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Corridor -->
+
+    <owl:Class rdf:about="&flooroccupancy;Corridor">
+        <rdfs:subClassOf rdf:resource="&flooroccupancy;Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Fan -->
+
+    <owl:Class rdf:about="&flooroccupancy;Fan"/>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Floor -->
+
+    <owl:Class rdf:about="&flooroccupancy;Floor"/>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Lab -->
+
+    <owl:Class rdf:about="&flooroccupancy;Lab">
+        <rdfs:subClassOf rdf:resource="&flooroccupancy;Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#ProfCabin -->
+
+    <owl:Class rdf:about="&flooroccupancy;ProfCabin">
+        <rdfs:subClassOf rdf:resource="&flooroccupancy;Floor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#TubeLight -->
+
+    <owl:Class rdf:about="&flooroccupancy;TubeLight"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B301 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B301">
+        <rdf:type rdf:resource="&flooroccupancy;ProfCabin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B301F -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B301F">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;B301"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B301L1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B301L1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;B301"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B302 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B302">
+        <rdf:type rdf:resource="&flooroccupancy;ProfCabin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B302F -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B302F">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;B302"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B302L1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B302L1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;B302"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B303 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B303">
+        <rdf:type rdf:resource="&flooroccupancy;ProfCabin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B303F -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B303F">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;B303"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B303L1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B303L1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;B303"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B304 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B304">
+        <rdf:type rdf:resource="&flooroccupancy;ProfCabin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B304F -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B304F">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;B304"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B304L1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B304L1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;B304"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B305 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B305">
+        <rdf:type rdf:resource="&flooroccupancy;ProfCabin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B305F -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B305F">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;B305"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B305L1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B305L1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;B305"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B306 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B306">
+        <rdf:type rdf:resource="&flooroccupancy;ProfCabin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B306F -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B306F">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;B306"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#B306L1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;B306L1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;B306"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1F1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1F1">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1F2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1F2">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1F3 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1F3">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1F4 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1F4">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1TL1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1TL1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1TL2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1TL2">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1TL3 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1TL3">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L1TL4 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L1TL4">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2F1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2F1">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2F2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2F2">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2F3 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2F3">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2F4 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2F4">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2F5 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2F5">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2F6 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2F6">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2TL1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2TL1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2TL2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2TL2">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2TL3 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2TL3">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L2TL4 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L2TL4">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L3F1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L3F1">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L3F2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L3F2">
+        <rdf:type rdf:resource="&flooroccupancy;Fan"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L3TL1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L3TL1">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#L3TL2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;L3TL2">
+        <rdf:type rdf:resource="&flooroccupancy;TubeLight"/>
+        <deployedIn rdf:resource="&flooroccupancy;Lab3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Lab1 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;Lab1">
+        <rdf:type rdf:resource="&flooroccupancy;Lab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Lab2 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;Lab2">
+        <rdf:type rdf:resource="&flooroccupancy;Lab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#Lab3 -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;Lab3">
+        <rdf:type rdf:resource="&flooroccupancy;Lab"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/flooroccupancy#ThirdFloorBWing -->
+
+    <owl:NamedIndividual rdf:about="&flooroccupancy;ThirdFloorBWing">
+        <rdf:type rdf:resource="&flooroccupancy;Corridor"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
