@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:qu="http://purl.oclc.org/NET/ssnx/qu/qu#" xmlns:dim="http://purl.oclc.org/NET/ssnx/qu/dim#" xmlns:cc="http://creativecommons.org/ns#" xmlns:unit="http://purl.oclc.org/NET/ssnx/qu/unit#" xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#" xmlns:quantity="http://purl.oclc.org/NET/ssnx/qu/quantity#" xmlns:prefix="http://purl.oclc.org/NET/ssnx/qu/prefix#" xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#" xmlns:neesmeta="http://eil.stanford.edu/neesgrid/model/neesmeta_1.2.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cf-feature="http://purl.oclc.org/NET/ssnx/cf/cf-feature#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:cf="http://purl.oclc.org/NET/ssnx/cf/cf-property#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:aws="http://purl.oclc.org/NET/ssnx/meteo/aws#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:phenonet="http://purl.oclc.org/NET/ssnx/meteo/phenonet#">
+	<owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet">
+		<dc:title>Ontology for Phenonet Sensor Network</dc:title>
+		<dc:description>Agriculture Meteorology sensor network ontology </dc:description>
+		<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurent Lefort (CSIRO, Australia and W3C Semantic Sensor Network Incubator Group)</dc:creator>
+		<dct:created>2010-09-21</dct:created>
+		<dct:modified>2011-06-20</dct:modified>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en">This ontology is is part of the Agriculture Meteorology example showcasing the ontology developed by the W3C Semantic Sensor Networks incubator group (SSN-XG). It is published here in order to generalize the potential usage and the alignment with other standardization efforts of the SSN ontology.
+
+For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/ .
+
+DISCLAIMER: This ontology includes information that has been automatically generated from data sourced from third parties but has not been fully manually checked. It is provided AS-IS, for information only, with no warranties or guarantees and confers no rights.</rdfs:comment>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string" xml:lang="en">Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org</rdfs:comment>
+		<dc:rights>Copyright 2010 - 2011 CSIRO. All rights reserved.</dc:rights>
+		<rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/</rdfs:seeAlso>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu"/>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu-rec20"/>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/cf/cf-property"/>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/cf/cf-feature"/>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/aws"/>
+	</owl:Ontology>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/author"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+	<owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+	<!-- Imported definitions -->
+	<!-- External definitions -->
+	<!-- http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium"/>
+	<!-- http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation"/>
+	<!-- http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface"/>
+	<!-- http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMedium  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceMedium"/>
+	<!-- http://purl.oclc.org/NET/ssnx/cf/cf-feature#Wind  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#Wind"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#CapacitiveAneroid  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#CapacitiveAneroid"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#CapacitiveBead  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#CapacitiveBead"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#CapacitiveThinFilmPolymer  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#CapacitiveThinFilmPolymer"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#FrequencyDomainReflectometryCapacitance  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#FrequencyDomainReflectometryCapacitance"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#GypsumBlock  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#GypsumBlock"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#ImpactDisdrometer  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#ImpactDisdrometer"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#Pyranometer  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#Pyranometer"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#QuantumSensor  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#QuantumSensor"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#SurfaceTemperatureRadiometer  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#SurfaceTemperatureRadiometer"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#Thermistor -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#Thermistor"/>
+	<!-- http://purl.oclc.org/NET/ssnx/meteo/aws#UltrasonicWindSensor  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/aws#UltrasonicWindSensor"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#Angle  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Angle"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#AngleUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngleUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#DimensionlessUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DimensionlessUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#Distance  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Distance"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#DistanceUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DistanceUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#Duration  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Duration"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#DurationUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DurationUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFluxUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFluxUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensity  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensity"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensityUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensityUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensityUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensityUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalArea  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalArea"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalAreaUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalAreaUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressureUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressureUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#Temperature  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed"/>
+	<!-- http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeedUnit  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeedUnit"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Process  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Process"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Output  -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Output"/>
+	<!--  http://purl.oclc.org/NET/ssnx/ssn#System -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasOutput  -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasOutput"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasProperty  -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem  -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#implementedBy  -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implementedBy"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#implements  -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#implements"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#observes  -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+	<!--  http://www.loa-cnr.it/ontologies/DUL.owl#isCharacterizedBy -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isCharacterizedBy"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf  -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf"/>
+	<!-- Local definitions -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#system">
+		<rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#sensor">
+		<rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+	</owl:ObjectProperty>
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#variable_code">
+		<rdfs:label>Variable code</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#variable_name">
+		<rdfs:label>Variable Name</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#snlog_code">
+		<rdfs:label>SNLOG code</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#sensor_id">
+		<rdfs:label>sensor ID</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#sensor_name">
+		<rdfs:label>sensor name</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#system_id">
+		<rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+		<rdfs:label>system ID</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://eil.stanford.edu/neesgrid/model/neesmeta_1.2.owl#manufacturer">
+		<rdfs:label>manufacturer</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://eil.stanford.edu/neesgrid/model/neesmeta_1.2.owl#manufacturerModelNumber">
+		<rdfs:label>manufacturerModelNumber</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://eil.stanford.edu/neesgrid/model/neesmeta_1.2.owl#shortDescription">
+		<rdfs:label>shortDescription</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://eil.stanford.edu/neesgrid/model/neesmeta_1.2.owl#longDescription">
+		<rdfs:label>longDescription</rdfs:label>
+	</owl:DatatypeProperty>
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Unit">
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Quality"/>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind"/>
+	<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#VaisalaWxt520">
+		<neesmeta:manufacturer>Vaisala</neesmeta:manufacturer>
+		<neesmeta:manufacturerModelNumber>WXT520</neesmeta:manufacturerModelNumber>
+		<neesmeta:shortDescription>Vaisala WXT520</neesmeta:shortDescription>
+		<neesmeta:longDescription>Weather Station: Wind, pressure, temperature, humidity, precipitation</neesmeta:longDescription>
+		<ssn:hasSubSystem>
+			<aws:UltrasonicWindSensor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:CapacitiveBead rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuThermocap"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:CapacitiveThinFilmPolymer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuHumicap180"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:CapacitiveAneroid rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuBarocap"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:ImpactDisdrometer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+		</ssn:hasSubSystem>
+	</ssn:System>
+	<aws:UltrasonicWindSensor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#VaisalaWxt520"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Angle rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_from_direction"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed_of_gust"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process20">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#DirectionMin">
+						<dul:hasParameter>
+							<dim:AngleUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeUnitOfAngle"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>DN</phenonet:variable_code>
+						<phenonet:variable_name>Direction Min</phenonet:variable_name>
+						<phenonet:snlog_code>20</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Windcap</phenonet:sensor_name>
+						<phenonet:sensor_id>WIND</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Angle rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_from_direction"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process21">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#DirectionAve">
+						<dul:hasParameter>
+							<dim:AngleUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeUnitOfAngle"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>DA</phenonet:variable_code>
+						<phenonet:variable_name>Direction Ave</phenonet:variable_name>
+						<phenonet:snlog_code>21</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Windcap</phenonet:sensor_name>
+						<phenonet:sensor_id>WIND</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Angle rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_from_direction"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process22">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#DirectionMax">
+						<dul:hasParameter>
+							<dim:AngleUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeUnitOfAngle"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>DX</phenonet:variable_code>
+						<phenonet:variable_name>Direction Max</phenonet:variable_name>
+						<phenonet:snlog_code>22</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Windcap</phenonet:sensor_name>
+						<phenonet:sensor_id>WIND</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Angle rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_from_direction"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process23">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SpeedMin">
+						<dul:hasParameter>
+							<dim:VelocityOrSpeedUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>SN</phenonet:variable_code>
+						<phenonet:variable_name>Speed Min</phenonet:variable_name>
+						<phenonet:snlog_code>23</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Windcap</phenonet:sensor_name>
+						<phenonet:sensor_id>WIND</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process24">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SpeedAve">
+						<dul:hasParameter>
+							<dim:VelocityOrSpeedUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>SM</phenonet:variable_code>
+						<phenonet:variable_name>Speed Ave</phenonet:variable_name>
+						<phenonet:snlog_code>24</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Windcap</phenonet:sensor_name>
+						<phenonet:sensor_id>WIND</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process25">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SpeedMax">
+						<dul:hasParameter>
+							<dim:VelocityOrSpeedUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metrePerSecond"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>SX</phenonet:variable_code>
+						<phenonet:variable_name>Speed Max</phenonet:variable_name>
+						<phenonet:snlog_code>25</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Windcap</phenonet:sensor_name>
+						<phenonet:sensor_id>WIND</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed_of_gust"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Windcap"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:UltrasonicWindSensor>
+	<aws:CapacitiveBead rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuThermocap">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#VaisalaWxt520"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#air_temperature"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process26">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#AirTemperature">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>TA</phenonet:variable_code>
+						<phenonet:variable_name>Air Temperature</phenonet:variable_name>
+						<phenonet:snlog_code>26</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 PTU Thermocap</phenonet:sensor_name>
+						<phenonet:sensor_id>PTU</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#air_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuThermocap"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:CapacitiveBead>
+	<aws:CapacitiveThinFilmPolymer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuHumicap180">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#VaisalaWxt520"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Dimensionless rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#relative_humidity"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process27">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#RelativeHumidity">
+						<dul:hasParameter>
+							<dim:DimensionlessUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#percent"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>UA</phenonet:variable_code>
+						<phenonet:variable_name>Relative Humidity</phenonet:variable_name>
+						<phenonet:snlog_code>27</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 PTU Humicap 180</phenonet:sensor_name>
+						<phenonet:sensor_id>PTU</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Dimensionless rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#relative_humidity"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuHumicap180"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:CapacitiveThinFilmPolymer>
+	<aws:CapacitiveAneroid rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuBarocap">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#VaisalaWxt520"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process28">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#AirPressure">
+						<dul:hasParameter>
+							<dim:StressOrPressureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#hectopascal"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>PA</phenonet:variable_code>
+						<phenonet:variable_name>Air Pressure</phenonet:variable_name>
+						<phenonet:snlog_code>28</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 PTU Barocap</phenonet:sensor_name>
+						<phenonet:sensor_id>PTU</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520PtuBarocap"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:CapacitiveAneroid>
+	<aws:ImpactDisdrometer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#VaisalaWxt520"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Distance rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#thickness_of_rainfall_amount"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:Duration rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#duration_of_rainfall"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#rainfall_rate"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:ReciprocalArea rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_amount"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:Duration rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#duration_of_hail"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:FluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_intensity"/>
+		</ssn:observes>
+		<ssn:observes>
+			<qu:QuantityKind rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#rain_peak"/>
+		</ssn:observes>
+		<ssn:observes>
+			<dim:FluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_peak"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process29">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#RainAccumulationAmount">
+						<dul:hasParameter>
+							<dim:DistanceUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#millimetre"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>RC</phenonet:variable_code>
+						<phenonet:variable_name>Rain Accumulation/Amount</phenonet:variable_name>
+						<phenonet:snlog_code>29</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Distance rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#thickness_of_rainfall_amount"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process30">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#RainDuration">
+						<dul:hasParameter>
+							<dim:DurationUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#second"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>RD</phenonet:variable_code>
+						<phenonet:variable_name>Rain Duration</phenonet:variable_name>
+						<phenonet:snlog_code>30</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Duration rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#duration_of_rainfall"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process31">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#RainIntensity">
+						<dul:hasParameter>
+							<dim:VelocityOrSpeedUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#millimetrePerHour"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>RI</phenonet:variable_code>
+						<phenonet:variable_name>Rain Intensity</phenonet:variable_name>
+						<phenonet:snlog_code>31</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#rainfall_rate"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process32">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#HailAccumulationAmount">
+						<dul:hasParameter>
+							<dim:ReciprocalAreaUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#perSquareCentimetreSecond"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>HC</phenonet:variable_code>
+						<phenonet:variable_name>Hail Accumulation/Amount</phenonet:variable_name>
+						<phenonet:snlog_code>32</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:ReciprocalArea rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_amount"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process33">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#HailDuration">
+						<dul:hasParameter>
+							<dim:DurationUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#second"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>HD</phenonet:variable_code>
+						<phenonet:variable_name>Hail Duration</phenonet:variable_name>
+						<phenonet:snlog_code>33</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Duration rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#duration_of_hail"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process34">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#HailIntensity">
+						<dul:hasParameter>
+							<dim:FluxDensityUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#perSquareCentimetreHour"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>HI</phenonet:variable_code>
+						<phenonet:variable_name>Hail Intensity</phenonet:variable_name>
+						<phenonet:snlog_code>34</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:FluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_intensity"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process35">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#RainPeak">
+						<dul:hasParameter>
+							<qu:Unit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#millimetrePerHour"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>RP</phenonet:variable_code>
+						<phenonet:variable_name>Rain Peak</phenonet:variable_name>
+						<phenonet:snlog_code>35</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<qu:QuantityKind rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#rain_peak"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process36">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#HailPeak">
+						<dul:hasParameter>
+							<dim:FluxDensityUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#perSquareCentimetreHour"/>
+						</dul:hasParameter>
+						<phenonet:variable_code>HP</phenonet:variable_code>
+						<phenonet:variable_name>Hail Peak</phenonet:variable_name>
+						<phenonet:snlog_code>36</phenonet:snlog_code>
+						<phenonet:sensor_name>WXT520 Raincap</phenonet:sensor_name>
+						<phenonet:sensor_id>RAIN</phenonet:sensor_id>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:FluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_peak"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Wxt520Raincap"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:ImpactDisdrometer>
+	<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Hussat8ChannelResistanceLogger">
+		<neesmeta:manufacturer>Hussat</neesmeta:manufacturer>
+		<neesmeta:manufacturerModelNumber>8 channel Resistance Logger</neesmeta:manufacturerModelNumber>
+		<neesmeta:shortDescription>Hussat Data Logger</neesmeta:shortDescription>
+		<neesmeta:longDescription>Data logger for Gypsum block and soil temperature</neesmeta:longDescription>
+		<ssn:hasSubSystem>
+			<aws:GypsumBlock rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Mea2176Gbheavy"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:Thermistor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+		</ssn:hasSubSystem>
+	</ssn:System>
+	<aws:GypsumBlock rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Mea2176Gbheavy">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Hussat8ChannelResistanceLogger"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_suction_at_saturation"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process40">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilMoistureLevel1">
+						<dul:hasParameter>
+							<dim:StressOrPressureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#kilopascal"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil moisture level 1</phenonet:variable_name>
+						<phenonet:snlog_code>40</phenonet:snlog_code>
+						<phenonet:sensor_name>MEA2176 GBHeavy</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_suction_at_saturation"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Mea2176Gbheavy"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process42">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilMoistureLevel2">
+						<dul:hasParameter>
+							<dim:StressOrPressureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#kilopascal"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil moisture level 2</phenonet:variable_name>
+						<phenonet:snlog_code>42</phenonet:snlog_code>
+						<phenonet:sensor_name>MEA2176 GBHeavy</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_suction_at_saturation"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Mea2176Gbheavy"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process44">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilMoistureLevel3">
+						<dul:hasParameter>
+							<dim:StressOrPressureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#kilopascal"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil moisture level 3</phenonet:variable_name>
+						<phenonet:snlog_code>44</phenonet:snlog_code>
+						<phenonet:sensor_name>MEA2176 GBHeavy</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_suction_at_saturation"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Mea2176Gbheavy"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process46">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilMoistureLevel4">
+						<dul:hasParameter>
+							<dim:StressOrPressureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#kilopascal"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil moisture level 4</phenonet:variable_name>
+						<phenonet:snlog_code>46</phenonet:snlog_code>
+						<phenonet:sensor_name>MEA2176 GBHeavy</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_suction_at_saturation"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Mea2176Gbheavy"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:GypsumBlock>
+	<aws:Thermistor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Hussat8ChannelResistanceLogger"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process41">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilTemperatureLevel1">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil temperature level 1</phenonet:variable_name>
+						<phenonet:snlog_code>41</phenonet:snlog_code>
+						<phenonet:sensor_name>B57861</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process43">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilTemperatureLevel2">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil temperature level 2</phenonet:variable_name>
+						<phenonet:snlog_code>43</phenonet:snlog_code>
+						<phenonet:sensor_name>B57861</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process45">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilTemperatureLevel3">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil temperature level 3</phenonet:variable_name>
+						<phenonet:snlog_code>45</phenonet:snlog_code>
+						<phenonet:sensor_name>B57861</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+			</ssn:Process>
+		</ssn:implements>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process47">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilTemperatureLevel4">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil temperature level 4</phenonet:variable_name>
+						<phenonet:snlog_code>47</phenonet:snlog_code>
+						<phenonet:sensor_name>B57861</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:Thermistor>
+	<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroSoilTemperatureSoilMoistureLeafTemperature">
+		<neesmeta:manufacturer>Powercom / CSIRO</neesmeta:manufacturer>
+		<neesmeta:manufacturerModelNumber>Soil Temperature - Soil Moisture - Leaf Temperature</neesmeta:manufacturerModelNumber>
+		<neesmeta:shortDescription>Soil Canopy Fleck Node</neesmeta:shortDescription>
+		<ssn:hasSubSystem>
+			<aws:Thermistor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:FrequencyDomainReflectometryCapacitance rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#EchoEc5"/>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<aws:SurfaceTemperatureRadiometer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Tn9"/>
+		</ssn:hasSubSystem>
+	</ssn:System>
+	<aws:Thermistor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroSoilTemperatureSoilMoistureLeafTemperature"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process1">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilTemperatureSurface">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil temperature surface</phenonet:variable_name>
+						<phenonet:snlog_code>1</phenonet:snlog_code>
+						<phenonet:sensor_name>B57861</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#B57861"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:Thermistor>
+	<aws:FrequencyDomainReflectometryCapacitance rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#EchoEc5">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroSoilTemperatureSoilMoistureLeafTemperature"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Dimensionless rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#volume_fraction_of_condensed_water_in_soil"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process2">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SoilMoistureSurface">
+						<dul:hasParameter>
+							<dim:DimensionlessUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#euclid"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Soil moisture surface</phenonet:variable_name>
+						<phenonet:snlog_code>2</phenonet:snlog_code>
+						<phenonet:sensor_name>Echo EC-5</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Dimensionless rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#volume_fraction_of_condensed_water_in_soil"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#EchoEc5"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:FrequencyDomainReflectometryCapacitance>
+	<aws:SurfaceTemperatureRadiometer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Tn9">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroSoilTemperatureSoilMoistureLeafTemperature"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#canopy_temperature"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process6">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#LeafTemperature">
+						<dul:hasParameter>
+							<dim:TemperatureUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Leaf Temperature</phenonet:variable_name>
+						<phenonet:snlog_code>6</phenonet:snlog_code>
+						<phenonet:sensor_name>TN9</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#canopy_temperature"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Tn9"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:SurfaceTemperatureRadiometer>
+	<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroPpfdPhotosyntheticPhotonFluxDensity">
+		<neesmeta:manufacturer>Powercom / CSIRO</neesmeta:manufacturer>
+		<neesmeta:manufacturerModelNumber>PPFD - Photosynthetic Photon Flux Density</neesmeta:manufacturerModelNumber>
+		<neesmeta:shortDescription>Quantum Sensor Fleck Node</neesmeta:shortDescription>
+		<ssn:hasSubSystem>
+			<aws:QuantumSensor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#LiCor190"/>
+		</ssn:hasSubSystem>
+	</ssn:System>
+	<aws:QuantumSensor rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#LiCor190">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroPpfdPhotosyntheticPhotonFluxDensity"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:PhotonFluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#surface_downwelling_photosynthetic_photon_flux_in_air"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process3">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Ppfd">
+						<dul:hasParameter>
+							<dim:PhotonFluxDensityUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#micromolePerSquareMetrePerSecond"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>PPFD</phenonet:variable_name>
+						<phenonet:snlog_code>3</phenonet:snlog_code>
+						<phenonet:sensor_name>Li-Cor 190</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:PhotonFluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#surface_downwelling_photosynthetic_photon_flux_in_air"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#LiCor190"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:QuantumSensor>
+	<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroIrradianceEnergyFlux">
+		<neesmeta:manufacturer>Powercom / CSIRO</neesmeta:manufacturer>
+		<neesmeta:manufacturerModelNumber>Irradiance - Energy Flux</neesmeta:manufacturerModelNumber>
+		<neesmeta:shortDescription>Pyranometer Fleck Node</neesmeta:shortDescription>
+		<ssn:hasSubSystem>
+			<aws:Pyranometer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#ApogeeSp212"/>
+		</ssn:hasSubSystem>
+	</ssn:System>
+	<aws:Pyranometer rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#ApogeeSp212">
+		<dul:isPartOf>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#PowercomCsiroIrradianceEnergyFlux"/>
+		</dul:isPartOf>
+		<ssn:observes>
+			<dim:EnergyFlux rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#surface_downwelling_shortwave_flux_in_air"/>
+		</ssn:observes>
+		<ssn:implements>
+			<ssn:Process rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#Process4">
+				<ssn:hasOutput>
+					<ssn:Output rdf:about="http://purl.oclc.org/NET/ssnx/meteo/phenonet#SolarFlux">
+						<dul:hasParameter>
+							<dim:EnergyFluxUnit rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#wattPerSquareMetre"/>
+						</dul:hasParameter>
+						<phenonet:variable_name>Solar Flux</phenonet:variable_name>
+						<phenonet:snlog_code>4</phenonet:snlog_code>
+						<phenonet:sensor_name>Apogee SP-212</phenonet:sensor_name>
+					</ssn:Output>
+				</ssn:hasOutput>
+				<ssn:hasProperty>
+					<dim:EnergyFlux rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#surface_downwelling_shortwave_flux_in_air"/>
+				</ssn:hasProperty>
+				<ssn:implementedBy rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/phenonet#ApogeeSp212"/>
+			</ssn:Process>
+		</ssn:implements>
+	</aws:Pyranometer>
+	<cf-feature:Wind rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#wind">
+		<ssn:hasProperty>
+			<dim:Angle rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_from_direction"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed_of_gust"/>
+		</ssn:hasProperty>
+	</cf-feature:Wind>
+	<cf-feature:SurfaceMedium rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#surface_air">
+		<ssn:hasProperty>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#air_temperature"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:Dimensionless rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#relative_humidity"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#air_pressure"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:PhotonFluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#surface_downwelling_photosynthetic_photon_flux_in_air"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:EnergyFlux rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#surface_downwelling_shortwave_flux_in_air"/>
+		</ssn:hasProperty>
+	</cf-feature:SurfaceMedium>
+	<cf-feature:Precipitation rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#rainfall">
+		<ssn:hasProperty>
+			<dim:Distance rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#thickness_of_rainfall_amount"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:Duration rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#duration_of_rainfall"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:VelocityOrSpeed rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#rainfall_rate"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<qu:QuantityKind rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#rain_peak"/>
+		</ssn:hasProperty>
+	</cf-feature:Precipitation>
+	<cf-feature:Precipitation rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#hail">
+		<ssn:hasProperty>
+			<dim:ReciprocalArea rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_amount"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:Duration rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#duration_of_hail"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:FluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_intensity"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:FluxDensity rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#hail_peak"/>
+		</ssn:hasProperty>
+	</cf-feature:Precipitation>
+	<cf-feature:Medium rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#soil">
+		<ssn:hasProperty>
+			<dim:StressOrPressure rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_suction_at_saturation"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#soil_temperature"/>
+		</ssn:hasProperty>
+		<ssn:hasProperty>
+			<dim:Dimensionless rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#volume_fraction_of_condensed_water_in_soil"/>
+		</ssn:hasProperty>
+	</cf-feature:Medium>
+	<cf-feature:Surface rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-feature#canopy">
+		<ssn:hasProperty>
+			<dim:Temperature rdf:about="http://purl.oclc.org/NET/ssnx/cf/cf-property#canopy_temperature"/>
+		</ssn:hasProperty>
+	</cf-feature:Surface>
+</rdf:RDF>

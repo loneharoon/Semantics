@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY ucum "http://purl.oclc.org/NET/muo/ucum/">
+	<!ENTITY uomvocab "http://purl.oclc.org/NET/muo/muo#">
+	<!ENTITY frequency "http://purl.oclc.org/NET/muo/ucum/unit/frequency/">
+	<!ENTITY ucum-quality "http://purl.oclc.org/NET/muo/ucum/physical-quality/">
+	<!ENTITY acceleration "http://purl.oclc.org/NET/muo/ucum/unit/acceleration/">
+]>
+<rdf:RDF xmlns:smart-knife="http://purl.oclc.org/NET/ssnx/product/smart-knife#" xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:uomvocab="http://purl.oclc.org/NET/muo/muo#" xmlns:ucum="http://purl.oclc.org/NET/muo/ucum/" xmlns:acceleration="&ucum;unit/acceleration/" xmlns:ucum-quality="&ucum;physical-quality/" xmlns:frequency="&ucum;unit/frequency/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/"  xmlns:cc="http://creativecommons.org/ns#">
+	<owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife">
+		<dc:title>SSN Ontology example: Smart Product</dc:title>
+		<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W3C Semantic Sensor Network Incubator Group</dc:creator>
+		<dct:created>2010-08-19</dct:created>
+		<dct:modified>2011-06-20</dct:modified>
+		<dc:rights>Copyright 2010 - 2011 W3C.</dc:rights>
+		<cc:license rdf:resource="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html"/>
+		<rdfs:comment>An example description of a hypothetical accelerometer sensor related to one of the SmartProducts use cases (cooking guidance). The ontology describes measurement capabilities of a class of accelerometer sensors (WiTilt v3.0 [1]), and an example of such a sensor attached to a kitchen utensil (knife).
+[1] http://www.sparkfun.com/datasheets/Accelerometers/WiTilt-v3.pdf </rdfs:comment>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/muo/ucum/"/>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+		<owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+	</owl:Ontology>
+   <!--	
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+	<owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>		
+	<!-- Imported definitions -->
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Observation -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#observedProperty -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#observationResult -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observationResult"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasValue -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#onPlatform -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#featureOfInterest -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#featureOfInterest"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#observes -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#forProperty -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#isProducedBy -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#isProducedBy"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#observedBy -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
+	<!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#hasMeasurementPropertyMaxValue -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasMeasurementPropertyMaxValue"/>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#hasMeasurementPropertyMinValue -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasMeasurementPropertyMinValue"/>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#hasMeasurementPropertyValue -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasMeasurementPropertyValue">
+		<rdfs:domain rdf:resource="&ssn;MeasurementProperty"/>
+		<rdfs:range rdf:resource="&ssn;ObservationValue"/>
+	</owl:ObjectProperty>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityUnitOfMeasurement -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityUnitOfMeasurement"/>
+	<!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityValue -->
+	<owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityValue">
+		<rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#QuantityObservationValue"/>
+	</owl:DatatypeProperty>
+	<!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://purl.oclc.org/NET/muo/muo#PhysicalQuality -->
+	<owl:Class rdf:about="&uomvocab;PhysicalQuality">
+		<rdfs:subClassOf rdf:resource="&ssn;Property"/>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/muo/muo#UnitOfMeasurement -->
+	<owl:Class rdf:about="&uomvocab;UnitOfMeasurement"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest -->
+	<owl:Class rdf:about="&ssn;FeatureOfInterest"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Frequency -->
+	<owl:Class rdf:about="&ssn;Frequency"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability -->
+	<owl:Class rdf:about="&ssn;MeasurementCapability"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#MeasurementProperty -->
+	<owl:Class rdf:about="&ssn;MeasurementProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#MeasurementRange -->
+	<owl:Class rdf:about="&ssn;MeasurementRange"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#SensorOutput -->
+	<owl:Class rdf:about="&ssn;SensorOutput"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Platform -->
+	<owl:Class rdf:about="&ssn;Platform"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+	<owl:Class rdf:about="&ssn;Property"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+	<owl:Class rdf:about="&ssn;SensingDevice"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#ObservationValue -->
+	<owl:Class rdf:about="&ssn;ObservationValue"/>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationMeasurementCapability -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationMeasurementCapability">
+		<rdfs:label>Acceleration measurement capability</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&ssn;MeasurementCapability"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;forProperty"/>
+				<owl:hasValue rdf:resource="&ucum;physical-quality/acceleration"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>This class describes measurement capabilities for accelerometer sensors. The property ssn:forProperty is restricted to ucum:acceleration.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationObservation -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationObservation">
+		<rdfs:label>Acceleration observation</rdfs:label>
+		<rdfs:comment>A class describing acceleration observations. Properties ssn:observationResult, ssn:observedBy, and ssn:observedProperty are restricted accordingly.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="&ssn;Observation"/>
+		<!-- Suppressed sub-class (Laurent)
+		<rdfs:subClassOf rdf:resource="&ssn;SensorOutput"/>
+		-->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;observationResult"/>
+				<owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationSensorOutput"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;observedBy"/>
+				<owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Accelerometer"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;observedProperty"/>
+				<owl:hasValue rdf:resource="&ucum;physical-quality/acceleration"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationSensorOutput -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationSensorOutput">
+		<!-- Fixed label (Laurent) -->
+		<rdfs:label>Acceleration sensor output</rdfs:label>
+		<rdfs:comment>A class describing sensor output for acceleration measurements. Properties ssn:hasValue and ssn:isProducedBy are restricted accordingly.</rdfs:comment>
+		<rdfs:subClassOf rdf:resource="&ssn;SensorOutput"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;hasValue"/>
+				<owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;isProducedBy"/>
+				<owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Accelerometer"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue">
+		<rdfs:label>Acceleration value</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#QuantityObservationValue"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityUnitOfMeasurement"/>
+				<owl:hasValue rdf:resource="&ucum;unit/acceleration/standard-acceleration-of-free-fall"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>Acceleration value measured in g - standard acceleration of free fall.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#Accelerometer -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#Accelerometer">
+		<rdfs:subClassOf rdf:resource="&ssn;SensingDevice"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;observes"/>
+				<owl:hasValue rdf:resource="&ucum;physical-quality/acceleration"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>Accelerometer is a subclass of sensing devices which measures acceleration. The individual describing a phisical quality &quot;acceleration&quot; is defined in the imported MobileWeb ontology of measurement units. To align the MobileWeb ontology with the SSN ontology, the class muo:PhysicalQuality from the MobileWeb ontology is defined as a subclass of the class ssn:Property.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#FrequencyValue -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#FrequencyValue">
+		<rdfs:label>Frequency value</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#QuantityObservationValue"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityUnitOfMeasurement"/>
+				<owl:hasValue rdf:resource="&ucum;unit/frequency/Herz"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>Frequency value measured in Hz.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#QuantityObservationValue -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#QuantityObservationValue">
+		<rdfs:label>Quantity observation value</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&ssn;ObservationValue"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityUnitOfMeasurement"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityUnitOfMeasurement"/>
+				<owl:allValuesFrom rdf:resource="&uomvocab;UnitOfMeasurement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#hasQuantityValue"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>Because SSN ontology does not specify the format of ssn:ObservationValue, in this example we define our own class representing quantities. It is characterised by the value () and the measurement unit.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30AccelerationMeasurementCapability -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30AccelerationMeasurementCapability">
+		<rdfs:label>WiTilt 3.0 acceleration measurement capability</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationMeasurementCapability"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+				<owl:onClass rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange"/>
+				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;hasMeasurementProperty"/>
+				<owl:onClass rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementFrequency"/>
+				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>This class describes measurement capabilities of WiTilt 3.0 acceleration sensors. Measurement capabilities are characterised by two parameters: measurement range and frequency. Possible values of these parameters are described by classes WiTilt30MeasurementRange and WiTilt30MeasurementFrequency respectively. A specific instance of a WiTilt 3.0 sensor must have exactly one value for each of these parameters.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30Accelerometer -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30Accelerometer">
+		<rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Accelerometer"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&ssn;hasMeasurementCapability"/>
+				<owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30AccelerationMeasurementCapability"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:comment>This class describes WiTilt v3.0 accelerometers. All possible configurations of their measurement capabilities are defined using the class WiTilt30AccelerationMeasurementCapability, so the property ssn:hasMeasurementCapability is restricted to instances of this class.</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementFrequency -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementFrequency">
+		<rdfs:label>WiTilt 3.0 measurement frequency</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&ssn;Frequency"/>
+		<rdfs:comment>This class describes maximal output frequency values of WiTilt 3.0 accelerometers in four modes: degree mode (50Hz), gravity mode (135Hz), raw ADC mode (220Hz), and binary mode (610Hz). Because the SSN ontology does not specify how the values of measurement properties should be expressed, three properties are introduced: hasMeasurementPropertyValue (for exact values), hasMeasurementPropertyMaxValue (for maximal values), and hasMeasurementPropertyMinValue (for minimal values).</rdfs:comment>
+	</owl:Class>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange">
+		<rdfs:label>WiTilt 3.0 measurement range</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&ssn;MeasurementRange"/>
+		<rdfs:comment>This class defines possible measurement ranges of a WiTilt 3.0 accelerometer sensor. These sensors can be calibrated to measure acceleration in the ranges of +/-1.5g, +/-2g, +/-4g and +/-6g. These four ranges are expressed using instances of this class: WiTilt30MeasurementRange_1...WiTilt30MeasurementRange_4. Because the SSN ontology does not specify how the values of measurement properties should be expressed, three properties are introduced: hasMeasurementPropertyValue (for exact values), hasMeasurementPropertyMaxValue (for maximal values), and hasMeasurementPropertyMinValue (for minimal values).</rdfs:comment>
+	</owl:Class>
+	<!-- http://www.w3.org/2002/07/owl#Thing -->
+	<owl:Class rdf:about="&owl;Thing"/>
+	<!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://purl.oclc.org/NET/muo/ucum/physical-quality/acceleration -->
+	<owl:Thing rdf:about="&ucum;physical-quality/acceleration"/>
+	<!-- http://purl.oclc.org/NET/muo/ucum/unit/acceleration/standard-acceleration-of-free-fall -->
+	<owl:Thing rdf:about="&ucum;unit/acceleration/standard-acceleration-of-free-fall"/>
+	<!-- http://purl.oclc.org/NET/muo/ucum/unit/frequency/Herz -->
+	<owl:Thing rdf:about="&ucum;unit/frequency/Herz"/>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTilt30Accelerometer -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTilt30Accelerometer">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30Accelerometer"/>
+		<rdfs:comment>A specific instance of a WiTilt 3.0 accelerometer attached to a knife.</rdfs:comment>
+		<ssn:hasMeasurementCapability rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTiltAccelerometerMeasurementCapability"/>
+		<ssn:onPlatform rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTiltAccelerometerMeasurementCapability -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTiltAccelerometerMeasurementCapability">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30AccelerationMeasurementCapability"/>
+		<rdfs:comment>Measurement capabilities of our example sensor. It is set to the &quot;binary&quot; mode where the frequency is 610 Hz and measures acceleration in the range of +/- 1.5g.</rdfs:comment>
+		<ssn:hasMeasurementProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30BinaryModeFrequency"/>
+		<ssn:hasMeasurementProperty rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#KnifeCuttingObservation_435782677 -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#KnifeCuttingObservation_435782677">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationObservation"/>
+		<rdfs:comment>An example of the acceleration observation produced by our ExampleWiTilt30Accelerometer. </rdfs:comment>
+		<ssn:observedProperty rdf:resource="&ucum;physical-quality/acceleration"/>
+		<ssn:observationResult rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#KnifeSensorOutput_2355676"/>
+		<ssn:featureOfInterest rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123"/>
+		<!-- Changed (Laurent) -->
+		<!--
+		<ssn:procedure rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTilt30Accelerometer"/>
+		-->
+		<ssn:observedBy rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTilt30Accelerometer"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#KnifeSensorOutput_2355676 -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#KnifeSensorOutput_2355676">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationSensorOutput"/>
+		<rdfs:comment>An example of the acceleration sensor output produced by our ExampleWiTilt30Accelerometer. </rdfs:comment>
+		<ssn:isProducedBy rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#ExampleWiTilt30Accelerometer"/>
+		<ssn:hasValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#ZAxisAccelerationMeasurementValue"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123 -->
+	<ssn:FeatureOfInterest rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123">
+		<rdf:type rdf:resource="&ssn;Platform"/>
+		<rdfs:comment>An example knife with an attached WiTilt 3.0 accelerometer. It belongs to both ssn:Platform and ssn:Feature because it is both the platform of the sensor and the feature being observed by the sensor.</rdfs:comment>
+	</ssn:FeatureOfInterest>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30BinaryModeFrequency -->
+	<smart-knife:WiTilt30MeasurementFrequency rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30BinaryModeFrequency">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasMeasurementPropertyValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30BinaryModeFrequencyValue"/>
+	</smart-knife:WiTilt30MeasurementFrequency>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30BinaryModeFrequencyValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30BinaryModeFrequencyValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#FrequencyValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">610</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30DegreeModeFrequency -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30DegreeModeFrequency">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementFrequency"/>
+		<smart-knife:hasMeasurementPropertyValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30DegreeModeFrequencyValue"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30DegreeModeFrequencyValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30DegreeModeFrequencyValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#FrequencyValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">50</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30GravityModeFrequency -->
+	<smart-knife:WiTilt30MeasurementFrequency rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30GravityModeFrequency">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasMeasurementPropertyValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30GravityModeFrequencyValue"/>
+	</smart-knife:WiTilt30MeasurementFrequency>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30GravityModeFrequencyValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30GravityModeFrequencyValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#FrequencyValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">135</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1 -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange"/>
+		<rdfs:comment rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123"/>
+		<smart-knife:hasMeasurementPropertyMaxValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1MaxValue"/>
+		<smart-knife:hasMeasurementPropertyMinValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1MinValue"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1MaxValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1MaxValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">1.5</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1MinValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_1MinValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">-1.5</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2 -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange"/>
+		<rdfs:comment rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123"/>
+		<smart-knife:hasMeasurementPropertyMaxValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2MaxValue"/>
+		<smart-knife:hasMeasurementPropertyMinValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2MinValue"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2MaxValue -->
+	<smart-knife:AccelerationValue rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2MaxValue">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">2</smart-knife:hasQuantityValue>
+	</smart-knife:AccelerationValue>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2MinValue -->
+	<smart-knife:AccelerationValue rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_2MinValue">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">-2</smart-knife:hasQuantityValue>
+	</smart-knife:AccelerationValue>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3 -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange"/>
+		<rdfs:comment rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123"/>
+		<smart-knife:hasMeasurementPropertyMaxValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3MaxValue"/>
+		<smart-knife:hasMeasurementPropertyMinValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3MinValue"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3MaxValue -->
+	<smart-knife:AccelerationValue rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3MaxValue">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">4</smart-knife:hasQuantityValue>
+	</smart-knife:AccelerationValue>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3MinValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_3MinValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">-4</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4 -->
+	<smart-knife:WiTilt30MeasurementRange rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<rdfs:comment rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#Knife_123"/>
+		<smart-knife:hasMeasurementPropertyMaxValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4MaxValue"/>
+		<smart-knife:hasMeasurementPropertyMinValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4MinValue"/>
+	</smart-knife:WiTilt30MeasurementRange>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4MaxValue -->
+	<smart-knife:AccelerationValue rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4MaxValue">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">6</smart-knife:hasQuantityValue>
+	</smart-knife:AccelerationValue>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4MinValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementRange_4MinValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#AccelerationValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">-6</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30RawADCModeFrequency -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30RawADCModeFrequency">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30MeasurementFrequency"/>
+		<smart-knife:hasMeasurementPropertyValue rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30RawADCModeFrequencyValue"/>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30RawADCModeFrequencyValue -->
+	<owl:Thing rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#WiTilt30RawADCModeFrequencyValue">
+		<rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/product/smart-knife#FrequencyValue"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">220</smart-knife:hasQuantityValue>
+	</owl:Thing>
+	<!-- http://purl.oclc.org/NET/ssnx/product/smart-knife#ZAxisAccelerationMeasurementValue -->
+	<smart-knife:AccelerationValue rdf:about="http://purl.oclc.org/NET/ssnx/product/smart-knife#ZAxisAccelerationMeasurementValue">
+		<rdf:type rdf:resource="&owl;Thing"/>
+		<smart-knife:hasQuantityValue rdf:datatype="&xsd;float">0.98</smart-knife:hasQuantityValue>
+	</smart-knife:AccelerationValue>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->

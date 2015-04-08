@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:uni-deploy="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#" xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#">
+	<owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy">
+		<dc:title>SSN Ontology example: University deployment</dc:title>
+		<dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W3C Semantic Sensor Network Incubator Group</dc:creator>
+		<dct:created>2010-09-14</dct:created>
+		<dct:modified>2011-06-20</dct:modified>
+		<dc:rights>Copyright 2010 - 2011 W3C.</dc:rights>
+		<cc:license rdf:resource="http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231.html"/>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org</rdfs:comment>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An example showing how the SSN-XG sensor ontology (http://www.w3.org/2005/Incubator/ssn/) can be used to describe a sensor network deployment.</rdfs:comment>
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). The concepts and structure of the ontology were discussed in the group's meetings and on the mailing list. For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/</rdfs:comment>
+		<rdfs:seeAlso>http://www.w3.org/2005/Incubator/ssn/</rdfs:seeAlso>
+		<owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+		<owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+	</owl:Ontology>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/author"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+	<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>		
+	<owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+	<owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+	<!-- Imported defintions -->
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Property -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange"/>
+	<!--http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Condition -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Condition"/>
+	<!--http://www.loa-cnr.it/ontologies/DUL.owl#Amount -->
+	<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#Amount"/>
+	<!--http://purl.oclc.org/NET/ssnx/ssn#Platform -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#System -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Accuracy -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#Deployment -->
+	<owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Deployment"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalPlace -->
+	<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalPlace"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure -->
+	<owl:Class rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#UnitOfMeasure"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy"/>
+	<!--http://purl.oclc.org/NET/ssnx/ssn#deployedSystem -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#deployedSystem"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasValue -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#isLocationOf -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#isLocationOf"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#deployedOnPlatform -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#deployedOnPlatform"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasDeployment -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasDeployment"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#inCondition -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation -->
+	<owl:ObjectProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasProperty -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasProperty"/>
+	<!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem -->
+	<owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+	<!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue -->
+	<owl:DatatypeProperty rdf:about="http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue"/>
+	<!-- Deployment -->
+	<ssn:Deployment rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#ABC01Deployment">
+		<ssn:deployedOnPlatform>
+			<ssn:Platform rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#UNiS-TSBPlatform"/>
+		</ssn:deployedOnPlatform>
+		<ssn:deployedSystem>
+			<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#SN-Node-TSB-ABC01">
+				<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A deployment which includes a temperature and a humidity sensor on the same sensor network node.</rdfs:comment>
+			</ssn:System>
+		</ssn:deployedSystem>
+	</ssn:Deployment>
+	<!-- Platform (and Operating conditions) -->
+	<ssn:Platform rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#UNiS-TSBPlatform">
+		<DUL:hasLocation>
+			<DUL:PhysicalPlace rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#PhysicalPlace_UNiSTestBED-BA03A">
+				<DUL:isLocationOf rdf:resource="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#UNiS-TSBPlatform"/>
+			</DUL:PhysicalPlace>
+		</DUL:hasLocation>
+	</ssn:Platform>
+	<!-- System (TelosB Mote) -->
+	<ssn:System rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#SN-Node-TSB-ABC01">
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sample sensor network node. The data is for TELOS-B product and the data sheet is available at: http://www.willow.co.uk/TelosB_Datasheet.pdf</rdfs:comment>
+		<ssn:hasDeployment>
+			<ssn:Deployment rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#ABC01Deployment"/>
+		</ssn:hasDeployment>
+		<ssn:hasSubSystem>
+			<ssn:SensingDevice rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TemperatureSensor-TSB-ABC01">
+				<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The embedded temperature sensor.</rdfs:comment>
+			</ssn:SensingDevice>
+		</ssn:hasSubSystem>
+		<ssn:hasSubSystem>
+			<ssn:SensingDevice rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#HumiditySensor-TSB-ABC01">
+				<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The embedded humidity sensor.</rdfs:comment>
+			</ssn:SensingDevice>
+		</ssn:hasSubSystem>
+		<ssn:hasOperatingProperty>
+			<ssn:OperatingPowerRange rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBOperatingPowerRange">
+				<ssn:hasValue>
+					<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#Current_Draw_Idle">
+						<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21</DUL:hasDataValue>
+						<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current Draw in Idle mode</rdfs:comment>
+						<DUL:isClassifiedBy>
+							<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#microAmpere"/>
+						</DUL:isClassifiedBy>
+					</DUL:Amount>
+				</ssn:hasValue>
+			</ssn:OperatingPowerRange>
+		</ssn:hasOperatingProperty>
+	</ssn:System>
+	<!-- Temperature sensor -->
+	<ssn:SensingDevice rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TemperatureSensor-TSB-ABC01">
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A specific instance of temperature sensor.</rdfs:comment>
+		<ssn:hasDeployment>
+			<ssn:Deployment rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#ABC01Deployment"/>
+		</ssn:hasDeployment>
+		<ssn:hasMeasurementCapability>
+			<ssn:MeasurementCapability rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBTempMeasurementCapability">
+				<ssn:inCondition>
+					<ssn:Condition rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBNormalOperatingCondition"/>
+				</ssn:inCondition>
+				<ssn:hasMeasurementProperty>
+					<ssn:Accuracy rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBTempAccuracy"/>
+				</ssn:hasMeasurementProperty>
+			</ssn:MeasurementCapability>
+		</ssn:hasMeasurementCapability>
+	</ssn:SensingDevice>
+	<ssn:Property rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#NormalTSBTemperature">
+		<ssn:hasValue>
+			<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#NormalTSBTemperature_value">
+				<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</DUL:hasDataValue>
+			</DUL:Amount>
+		</ssn:hasValue>
+	</ssn:Property>
+	<ssn:Condition rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBNormalOperatingCondition">
+		<ssn:hasProperty rdf:resource="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#NormalTSBTemperature"/>
+	</ssn:Condition>
+	<ssn:Accuracy rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBTempAccuracy">
+		<ssn:hasValue>
+			<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBTempAccuracy_value">
+				<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</DUL:hasDataValue>
+				<DUL:isClassifiedBy>
+					<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#Celsius">
+						<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of Measurement- Celsius</rdfs:comment>
+					</DUL:UnitOfMeasure>
+				</DUL:isClassifiedBy>
+				<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature accuracy is specified in Celsius and it is measured @25°C</rdfs:comment>
+			</DUL:Amount>
+		</ssn:hasValue>
+	</ssn:Accuracy>
+	<!-- Humidity sensor -->
+	<ssn:SensingDevice rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#HumiditySensor-TSB-ABC01">
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A specific instance of humidity sensor.</rdfs:comment>
+		<ssn:hasDeployment>
+			<ssn:Deployment rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#ABC01Deployment"/>
+		</ssn:hasDeployment>
+		<ssn:hasMeasurementCapability>
+			<ssn:MeasurementCapability rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBHumiditiyMeasurementCapability">
+				<ssn:hasMeasurementProperty>
+					<ssn:Accuracy rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBHumiditiyAccuracy"/>
+				</ssn:hasMeasurementProperty>
+			</ssn:MeasurementCapability>
+		</ssn:hasMeasurementCapability>
+	</ssn:SensingDevice>
+	<ssn:Accuracy rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBHumiditiyAccuracy">
+		<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humidity accuracy specified as Absolute RH.</rdfs:comment>
+		<!-- Pellet flags an issue because of DUL disjoint classes: Units can be attached to Parameter not to a Quality -->
+		<ssn:hasValue>
+			<DUL:Amount rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#TSBHumiditiyAccuracy_value">
+				<DUL:hasDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.5</DUL:hasDataValue>
+				<!-- Note : RH is not really a unit - I would have use percent -->
+				<DUL:isClassifiedBy>
+					<DUL:UnitOfMeasure rdf:about="http://purl.oclc.org/NET/ssnx/uni/uni-deploy#RH">
+						<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relative humidity (RH)</rdfs:comment>
+					</DUL:UnitOfMeasure>
+				</DUL:isClassifiedBy>
+			</DUL:Amount>
+		</ssn:hasValue>
+	</ssn:Accuracy>
+	<!-- startTime and endTime for deployment ? .-->
+</rdf:RDF>

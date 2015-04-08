@@ -267,14 +267,14 @@
         <rdfs:subClassOf rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/tempsensor#TemperatureSensor"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
-                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/tempsensor#DS18B20OperatingTemperature"/>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/tempsensor#MUCTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
-                <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/tempsensor#MUCTemperature"/>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/tempsensor#DS18B20OperatingTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
