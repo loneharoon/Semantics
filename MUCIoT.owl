@@ -28,6 +28,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/author -->
+
+    <owl:AnnotationProperty rdf:about="&dc;author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -178,6 +195,18 @@
     
 
 
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueInclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueInclusive"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueInclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueInclusive"/>
+    
+
+
     <!-- http://purl.oclc.org/NET/ssnx/qu/qu#code -->
 
     <owl:DatatypeProperty rdf:about="&qu;code"/>
@@ -226,6 +255,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/meteo/WM30#ValueRange -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#ValueRange"/>
     
 
 
@@ -2401,6 +2436,102 @@ two quantities as a number.&quot;</rdfs:comment>
     
 
 
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDS9300SupplyVoltageRange -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDS9300SupplyVoltageRange">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingRange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#OperatingPowerRange"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#volt"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">3.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/meteo/WM30#hasRangeMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">2.4</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDS9300TempOperatingRange -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDS9300TempOperatingRange">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#OperatingRange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingProperty"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/meteo/WM30#ValueRange"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">85.0</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMinValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-30.0</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDSLightMeasurementCapability -->
 
     <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDSLightMeasurementCapability">
@@ -2419,6 +2550,46 @@ two quantities as a number.&quot;</rdfs:comment>
 
     <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#DS18B20MeasurementCapability">
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#Value_Range"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#unitOfMeasure"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:oneOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
+                                                        </owl:oneOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">-0.5</owl:hasValue>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMaxValueInclusive"/>
+                                                <owl:hasValue rdf:datatype="&xsd;float">0.5</owl:hasValue>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#forProperty"/>
@@ -2455,46 +2626,6 @@ two quantities as a number.&quot;</rdfs:comment>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMaxValueInclusive"/>
                                                 <owl:hasValue rdf:datatype="&xsd;float">85.0</owl:hasValue>
-                                            </owl:Restriction>
-                                        </owl:intersectionOf>
-                                    </owl:Class>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#inCondition"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Accuracy"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
-                                <owl:someValuesFrom>
-                                    <owl:Class>
-                                        <owl:intersectionOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#Value_Range"/>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#unitOfMeasure"/>
-                                                <owl:someValuesFrom>
-                                                    <owl:Class>
-                                                        <owl:oneOf rdf:parseType="Collection">
-                                                            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#degreeCelsius"/>
-                                                        </owl:oneOf>
-                                                    </owl:Class>
-                                                </owl:someValuesFrom>
-                                            </owl:Restriction>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMaxValueInclusive"/>
-                                                <owl:hasValue rdf:datatype="&xsd;float">-0.5</owl:hasValue>
-                                            </owl:Restriction>
-                                            <owl:Restriction>
-                                                <owl:onProperty rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#hasRegionMaxValueInclusive"/>
-                                                <owl:hasValue rdf:datatype="&xsd;float">0.5</owl:hasValue>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -2564,13 +2695,13 @@ two quantities as a number.&quot;</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasProperty"/>
-                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCTemperature"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCIlluminance"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasProperty"/>
-                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCIlluminance"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2611,16 +2742,25 @@ two quantities as a number.&quot;</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
-                <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCIlluminance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasMeasurementCapability"/>
                 <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDSLightMeasurementCapability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange"/>
+                <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#APDSLightMeasurementCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
+                <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCIlluminance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:author rdf:datatype="&xsd;string">Haroon Rashid</dc:author>
+        <rdfs:comment rdf:datatype="&xsd;string">The APDS-9300 is a low-voltage Digital Ambient Light Photo Sensor that converts light intensity to digital signal output capable of direct I2C interface.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.avagotech.com/pages/en/optical_sensors/ambient_light_photo_sensors/apds-9300/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2647,6 +2787,12 @@ two quantities as a number.&quot;</rdfs:comment>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observes"/>
                 <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#MUCTemperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasOperatingRange"/>
+                <owl:allValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/MUCIoT#DS18B20TempOperatingRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2842,6 +2988,12 @@ two quantities as a number.&quot;</rdfs:comment>
     <!-- http://purl.oclc.org/NET/ssnx/qu/unit#metreToTheFourthPower -->
 
     <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#metreToTheFourthPower"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#volt -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#volt"/>
 </rdf:RDF>
 
 
