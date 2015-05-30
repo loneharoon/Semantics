@@ -1,0 +1,2923 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#"
+     xml:base="http://www.iiitd.edu.in/~haroonr/ontologies/DGO"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#">
+        <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/author -->
+
+    <owl:AnnotationProperty rdf:about="&dc;author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#baseDimension -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseDimension"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#baseQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseQuantityKind"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#baseUnit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseUnit"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#dimension -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#dimension"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#factorQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#factorQuantityKind"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#generalQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#generalQuantityKind"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#prefix -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#prefix"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#propertyType -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#propertyType">
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#quantityComponent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityComponent"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#referenceUnit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#referenceUnit"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#specificQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#specificQuantityKind"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#systemOfQuantities -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#systemOfQuantities"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unit"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unitComponent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitComponent"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unitKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitKind"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AccelerationUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AccelerationUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AccousticalImpedance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AccousticalImpedance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AccousticalImpedanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AccousticalImpedanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Activity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Activity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ActivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ActivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AmountOfSubstance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AmountOfSubstance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AmountOfSubstanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AmountOfSubstanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Angle -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Angle">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AngleUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngleUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AngularAcceleration -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngularAcceleration">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AngularAccelerationUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngularAccelerationUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AngularMomentum -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngularMomentum">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AngularMomentumUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngularMomentumUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ApparentPower -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ApparentPower">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ApparentPowerUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ApparentPowerUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Area -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Area">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AreaUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AreaUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AreicElectricCurrent -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AreicElectricCurrent">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#AreicElectricCurrentUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AreicElectricCurrentUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Capacitance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Capacitance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#CapacitanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CapacitanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ChargeDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ChargeDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ChargeDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ChargeDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#CoefficientOfThermalInsulation -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CoefficientOfThermalInsulation">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#CoefficientOfThermalInsulationUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CoefficientOfThermalInsulationUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#CompressibilityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CompressibilityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Concentration -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Concentration">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#unitKind"/>
+                <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Conductance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Conductance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ConductanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ConductanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Density -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Density">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DifferentialCrossSection -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DifferentialCrossSection">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DifferentialCrossSectionUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DifferentialCrossSectionUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DimensionlessUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DimensionlessUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Distance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Distance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DistanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DistanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DoseEquivalent -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DoseEquivalent">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DoseEquivalentUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DoseEquivalentUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Duration -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Duration">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DurationUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DurationUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DynamicViscosity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DynamicViscosity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#DynamicViscosityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DynamicViscosityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCharge -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCharge">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricChargeUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricChargeUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCurrentRate -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCurrentRate">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCurrentRateUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCurrentRateUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDipoleMoment -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDipoleMoment">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDipoleMomentUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDipoleMomentUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDisplacement -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDisplacement">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDisplacementUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDisplacementUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricFieldStrength -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricFieldStrength">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricFieldStrengthUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricFieldStrengthUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricLineReactance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricLineReactance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricLineReactanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricLineReactanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricPotential -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricPotential">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricPotentialUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricPotentialUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricResistance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricResistance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectricResistanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricResistanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectromagneticMoment -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectromagneticMoment">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectromagneticMomentUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectromagneticMomentUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectronicDensityOfStates -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectronicDensityOfStates">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ElectronicDensityOfStatesUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectronicDensityOfStatesUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Energy -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Energy">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFluxUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFluxUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#EnergyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Exposure -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Exposure">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ExposureRate -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ExposureRate">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ExposureRateUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ExposureRateUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ExposureUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ExposureUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#FluxDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Force -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Force">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ForceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ForceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Frequency -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Frequency">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#FrequencyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#FrequencyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#GravitationalCoupling -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#GravitationalCoupling">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#GravitationalCouplingUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#GravitationalCouplingUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#HeatCapacity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HeatCapacity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#HeatCapacityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HeatCapacityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#HeatTransferCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HeatTransferCoefficient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#HeatTransferCoefficientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HeatTransferCoefficientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#HolographicMaterialSlabSensitivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HolographicMaterialSlabSensitivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#HolographicMaterialSlabSensitivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HolographicMaterialSlabSensitivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Illuminance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Illuminance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#unitKind"/>
+                <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#IlluminanceUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#IlluminanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#IlluminanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Inductance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Inductance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#InductanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#InductanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#InverseAmount -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#InverseAmount">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#InverseAmountUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#InverseAmountUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LengthPerTemperature -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LengthPerTemperature">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LengthPerTemperatureUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LengthPerTemperatureUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LevelOfAFieldQuantity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LevelOfAFieldQuantity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LevelOfAFieldQuantityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LevelOfAFieldQuantityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LinearDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LinearDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LinearDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LinearDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LinearEnergyTransfer -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LinearEnergyTransfer">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LinearEnergyTransferUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LinearEnergyTransferUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousEfficacy -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousEfficacy">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousEfficacyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousEfficacyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousExposure -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousExposure">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousExposureUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousExposureUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousFlux -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousFluxUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousFluxUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousIntensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousIntensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#LuminousIntensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousIntensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFlux -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagneticVectorPotential -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticVectorPotential">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagneticVectorPotentialUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticVectorPotentialUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Magnetization -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Magnetization">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MagnetizationUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagnetizationUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Mass -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Mass">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassAttenuationCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassAttenuationCoefficient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassAttenuationCoefficientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassAttenuationCoefficientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRate">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRateUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRateUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerAreaUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerAreaUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MassUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MechanicalImpedance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MechanicalImpedance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MechanicalImpedanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MechanicalImpedanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Molality -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Molality">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolalityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolalityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarAbsorptionCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarAbsorptionCoefficient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarAbsorptionCoefficientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarAbsorptionCoefficientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarConductivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarConductivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarConductivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarConductivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarEnergy -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarEnergy">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarEnergyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarEnergyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarFlux -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarFlux">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarFluxUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarFluxUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarHeatCapacity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarHeatCapacity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarHeatCapacityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarHeatCapacityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarVolume -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarVolume">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolarVolumeUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarVolumeUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolecularWeight -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolecularWeight">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MolecularWeightUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolecularWeightUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MomentOfInertia -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MomentOfInertia">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MomentOfInertiaUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MomentOfInertiaUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Momentum -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Momentum">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#MomentumUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MomentumUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerArea -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerArea">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerAreaUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerAreaUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLength">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLengthUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLengthUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Permeability -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Permeability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PermeabilityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PermeabilityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Permittivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Permittivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PermittivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PermittivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonIntensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonIntensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonIntensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonIntensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonLuminance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonLuminance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PhotonLuminanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonLuminanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Power -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Power">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PowerGradient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PowerGradient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PowerGradientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PowerGradientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PowerUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PowerUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PressureCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PressureCoefficient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#PressureCoefficientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PressureCoefficientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#QuantityOfLight -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#QuantityOfLight">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#QuantityOfLightUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#QuantityOfLightUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Radiance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Radiance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposureUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposureUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadianceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadiantIntensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiantIntensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadiantIntensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiantIntensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDose -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDose">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseRate -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseRate">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseRateUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseRateUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReactivePower -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReactivePower">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReactivePowerUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReactivePowerUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalArea -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalArea">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalAreaUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReciprocalAreaUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Reluctance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Reluctance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ReluctanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReluctanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Resistivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Resistivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ResistivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ResistivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeedUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeedUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RotatoryPower -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RotatoryPower">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#RotatoryPowerUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RotatoryPowerUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SecondMomentOfArea -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SecondMomentOfArea">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SecondMomentOfAreaUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SecondMomentOfAreaUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SeebeckCoefficient -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SeebeckCoefficient">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SeebeckCoefficientUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SeebeckCoefficientUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SolidAngle -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SolidAngle">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SolidAngleUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SolidAngleUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificAcousticImpedance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificAcousticImpedance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificAcousticImpedanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificAcousticImpedanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEnergy -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEnergy">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEnergyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEnergyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificVolume -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificVolume">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpecificVolumeUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificVolumeUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpectralAngularCrossSection -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralAngularCrossSection">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpectralAngularCrossSectionUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralAngularCrossSectionUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpectralConcentrationOfVibrationalModesInTermsOfAngularFrequency -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralConcentrationOfVibrationalModesInTermsOfAngularFrequency">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpectralConcentrationOfVibrationalModesInTermsOfAngularFrequencyUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralConcentrationOfVibrationalModesInTermsOfAngularFrequencyUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpectralRadiantEnergyDensityInTermsOfWaveLength -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralRadiantEnergyDensityInTermsOfWaveLength">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SpectralRadiantEnergyDensityInTermsOfWaveLengthUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralRadiantEnergyDensityInTermsOfWaveLengthUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#StefanBoltzmannConstant -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StefanBoltzmannConstant">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#StefanBoltzmannConstantUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StefanBoltzmannConstantUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressureUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressureUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceTension -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceTension">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceTensionUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceTensionUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Temperature -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDrift">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDriftUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDriftUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThermalResistance -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalResistance">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThermalResistanceUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalResistanceUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThicknessFrequencyProduct -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThicknessFrequencyProduct">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#ThicknessFrequencyProductUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThicknessFrequencyProductUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#TorsionalStiffness -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TorsionalStiffness">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#TorsionalStiffnessUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TorsionalStiffnessUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeedUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeedUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#Volume -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#Volume">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRate -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRate">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRateUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRateUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRate -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRate">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRateUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRateUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumeUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumicActivity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumicActivity">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumicActivityUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumicActivityUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumicDose -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumicDose">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/dim#VolumicDoseUnit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumicDoseUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind">
+        <rdfs:label rdf:datatype="&xsd;string">PropertyKind </rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A PropertyKind  is a meta-property which helps to characterise categories of properties e.g. scalar, vector</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">
+        <owl:disjointWith rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#Unit -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2MeasurementCapability -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2MeasurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2Sensor_Diningroom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2Sensor_Diningroom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2Sensor_room -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2Sensor_room">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#DiningRoom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#DiningRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumidityMeasurementCapability -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumidityMeasurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumiditySensor_Diningroom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumiditySensor_Diningroom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumiditySensor_room -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumiditySensor_room">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightMeasurementCapability -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightMeasurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightSensor_Diningroom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightSensor_Diningroom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightSensor_room -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightSensor_room">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LivingRoom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LivingRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#SN-System-DiningRoom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#SN-System-DiningRoom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightSensor_Diningroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureSensor_Diningroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2Sensor_Diningroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumiditySensor_Diningroom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#SN-System-Room -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#SN-System-Room">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#Co2Sensor_room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#LightSensor_room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureSensor_room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#HumiditySensor_room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureMeasurementCapability -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureMeasurementCapability">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#MeasurementCapability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureSensor_Diningroom -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureSensor_Diningroom">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureSensor_room -->
+
+    <owl:Class rdf:about="http://www.iiitd.edu.in/~haroonr/ontologies/DGO#TemperatureSensor_room">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#ability -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#ability">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#complexScalarProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#complexScalarProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#dimensionlessProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#dimensionlessProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#dose -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#dose">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#doseRate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#doseRate">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#efficacy -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#efficacy">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#energyFlowRate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#energyFlowRate">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#equilibriumConstant -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#equilibriumConstant">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#exponent -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#exponent">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveConservedQuantity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveConservedQuantity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveScalarProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveScalarProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveVectorProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#extensiveVectorProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#factor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#factor">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#flowRate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#flowRate">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#flux -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#flux">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#fraction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#fraction">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#index -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#index">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#intensiveProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#intensiveProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#mathematicalFunction -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#mathematicalFunction">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#probability -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#probability">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#property -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#property">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#propertyDifference -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#propertyDifference">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#pseudovectorConservedQuantity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#pseudovectorConservedQuantity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#pseudovectorField -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#pseudovectorField">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#pseudovectorProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#pseudovectorProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#quantity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#quantity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#rate -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#rate">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#ratio -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#ratio">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#relativeProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#relativeProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#scalarExtensiveConservedQuantity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#scalarExtensiveConservedQuantity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#scalarProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#scalarProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#scalarPropertyOrVectorProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#scalarPropertyOrVectorProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#secondOrderTensorProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#secondOrderTensorProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#strain -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#strain">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#thermodynamicProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#thermodynamicProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#top -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#top">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#vectorField -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#vectorField">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#vectorProperty -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#vectorProperty">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#viscosity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#viscosity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/quantity#yield -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/quantity#yield">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#kilomolePerCubicMetre -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#kilomolePerCubicMetre">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#lux -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#lux">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#IlluminanceUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#millimolePerLitre -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#millimolePerLitre">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#molePerCubicDecimetre -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#molePerCubicDecimetre">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#molePerCubicMetre -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#molePerCubicMetre">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/unit#molePerLitre -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/ssnx/qu/unit#molePerLitre">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AccelerationUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AccousticalImpedanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ActivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AmountOfSubstanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngleUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngularAccelerationUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AngularMomentumUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ApparentPowerUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AreaUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#AreicElectricCurrentUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CapacitanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ChargeDensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CoefficientOfThermalInsulationUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#CompressibilityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ConcentrationUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ConductanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DifferentialCrossSectionUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DiffusionCoefficientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DimensionlessUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DistanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DoseEquivalentUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DurationUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#DynamicViscosityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricChargeUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricConductivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricCurrentRateUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDipoleMomentUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricDisplacementUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricFieldStrengthUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricLineReactanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricPotentialUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectricResistanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectromagneticMomentUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ElectronicDensityOfStatesUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFluxUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ExposureRateUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ExposureUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ForceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#FrequencyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#GravitationalCouplingUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HeatCapacityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HeatTransferCoefficientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#HolographicMaterialSlabSensitivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#IlluminanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#InductanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#InverseAmountUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LengthPerTemperatureUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LevelOfAFieldQuantityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LinearDensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LinearEnergyTransferUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousEfficacyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousExposureUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousFluxUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#LuminousIntensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxDensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticFluxUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagneticVectorPotentialUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MagnetizationUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassAttenuationCoefficientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassFlowRateUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerAreaUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MassUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MechanicalImpedanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolalityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarAbsorptionCoefficientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarConductivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarEnergyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarFluxUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarHeatCapacityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolarVolumeUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MolecularWeightUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MomentOfInertiaUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#MomentumUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerAreaUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#NumberPerLengthUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PermeabilityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PermittivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonFluxDensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonIntensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PhotonLuminanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PowerGradientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PowerUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#PressureCoefficientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#QuantityOfLightUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposureUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiantIntensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseRateUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RadiationDoseUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReactivePowerUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ReluctanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ResistivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeedUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#RotatoryPowerUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SecondMomentOfAreaUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SeebeckCoefficientUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SolidAngleUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificAcousticImpedanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEnergyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificVolumeUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralAngularCrossSectionUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralConcentrationOfVibrationalModesInTermsOfAngularFrequencyUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SpectralRadiantEnergyDensityInTermsOfWaveLengthUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StefanBoltzmannConstantUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressureUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceTensionUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureDriftUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TemperatureUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalResistanceUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#ThicknessFrequencyProductUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#TorsionalStiffnessUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeedUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeDensityRateUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeFlowRateUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumeUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumicActivityUnit"/>
+            <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/qu/dim#VolumicDoseUnit"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

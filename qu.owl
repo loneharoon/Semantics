@@ -1,508 +1,642 @@
 <?xml version="1.0"?>
-<rdf:RDF
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:unit="http://purl.oclc.org/NET/ssnx/qu/unit#"
-    xmlns:quantity="http://purl.oclc.org/NET/ssnx/qu/quantity#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:prefix="http://purl.oclc.org/NET/ssnx/qu/prefix#"
-    xmlns:cc="http://creativecommons.org/ns#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:dim="http://purl.oclc.org/NET/ssnx/qu/dim#"
-    xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:qu="http://purl.oclc.org/NET/ssnx/qu/qu#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="file:/Users/haroonr/github-loneharoon/Semantics/qu.owl">
-  <owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >In order to generalize its potential usage and alignment with other standardization efforts concerning quantities and units, the QU  ontology has been further developed as a complement to the Agriculture Meteorology example showcasing the ontology developed by the W3C Semantic Sensor Networks incubator group (SSN-XG). The Agriculture Meteorology example also includes an application of the QU schema to the UN/CEFACT Recommendation 20 code list. For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/ .</rdfs:comment>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Roger Burkhart (John Deere, USA and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
-    <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >qu.owl  Copyright 2010 - 2011 CSIRO</dc:rights>
-    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >2009-08-26</dct:created>
-    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Library for Quantity Kinds and Units: schema, based on QUDV model OMG SysML(TM), Version 1.2</dc:title>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >2011-06-20</dct:modified>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Hans Peter de Koning (ESA, Netherlands and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Laurent Lefort (CSIRO, Australia and W3C Semantic Sensor Network Incubator Group)</dc:creator>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The QUDV copyright holders have agreed for the QU ontology to be published by the W3C Semantic Sensor Incubator Group but this does not constitute an endorsement or recommendation by the QUDV working group of the SysML 1.2 Revision Task Force. All other rights reserved.</rdfs:comment>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >This ontology is partially based on the SysML QUDV (Quantities, Units, Dimensions and Values) proposed by a working group of the SysML 1.2 Revision Task Force (RTF), working in close coordination with the OMG MARTE specification group. This model library is specified in a UML/SysML class/block diagram in the OMG SysML, Version 1.2 specification (http://www.omg.org/spec/SysML/1.2/). This model is described in OMG  SysML, Version 1.2 Appendix C.4 Model Library for Quantity Kinds and Units (http://ontolog.cim3.net/file/resource/reference/UoM_Ontology_Standard/available-UoM-references/QUDV-Annex-C4-C5--OMG-SysML-v1-2_Oct-2009.pdf).		
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY qu "http://purl.oclc.org/NET/ssnx/qu/qu#" >
+    <!ENTITY dim "http://purl.oclc.org/NET/ssnx/qu/dim#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY unit "http://purl.oclc.org/NET/ssnx/qu/unit#" >
+    <!ENTITY prefix "http://purl.oclc.org/NET/ssnx/qu/prefix#" >
+    <!ENTITY quantity "http://purl.oclc.org/NET/ssnx/qu/quantity#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.oclc.org/NET/ssnx/qu/qu#"
+     xml:base="http://purl.oclc.org/NET/ssnx/qu/qu"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:dim="http://purl.oclc.org/NET/ssnx/qu/dim#"
+     xmlns:unit="http://purl.oclc.org/NET/ssnx/qu/unit#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:prefix="http://purl.oclc.org/NET/ssnx/qu/prefix#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:quantity="http://purl.oclc.org/NET/ssnx/qu/quantity#"
+     xmlns:qu="http://purl.oclc.org/NET/ssnx/qu/qu#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:cc="http://creativecommons.org/ns#">
+    <owl:Ontology rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <dct:created rdf:datatype="&xsd;string">2009-08-26</dct:created>
+        <dct:modified rdf:datatype="&xsd;string">2011-06-20</dct:modified>
+        <dc:creator rdf:datatype="&xsd;string">Hans Peter de Koning (ESA, Netherlands and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
+        <dc:creator rdf:datatype="&xsd;string">Huascar Espinoza (CEA, France and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">In order to generalize its potential usage and alignment with other standardization efforts concerning quantities and units, the QU  ontology has been further developed as a complement to the Agriculture Meteorology example showcasing the ontology developed by the W3C Semantic Sensor Networks incubator group (SSN-XG). The Agriculture Meteorology example also includes an application of the QU schema to the UN/CEFACT Recommendation 20 code list. For more information on the group&apos;s activities see: http://www.w3.org/2005/Incubator/ssn/ .</rdfs:comment>
+        <dc:creator rdf:datatype="&xsd;string">Laurent Lefort (CSIRO, Australia and W3C Semantic Sensor Network Incubator Group)</dc:creator>
+        <dc:title rdf:datatype="&xsd;string">Library for Quantity Kinds and Units: schema, based on QUDV model OMG SysML(TM), Version 1.2</dc:title>
+        <dc:creator rdf:datatype="&xsd;string">Nicolas Rouquette (NASA-JPL, USA and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org or alternatively, for enquiries about the QUDV model,  to the QUDV mailing list: http://www.omg.org/publicarchives/qudv/</rdfs:comment>
+        <dc:creator rdf:datatype="&xsd;string">Roger Burkhart (John Deere, USA and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">The QUDV copyright holders have agreed for the QU ontology to be published by the W3C Semantic Sensor Incubator Group but this does not constitute an endorsement or recommendation by the QUDV working group of the SysML 1.2 Revision Task Force. All other rights reserved.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">This Model Library for Quantities, Units, Dimensions and Values (QUDV)  (Note: in the ontology, the SYSML-QUDV definitions are flagged with a rdfs:seeAlso annotation equal to http://www.omgsysml.org/qudv).</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">This ontology is partially based on the SysML QUDV (Quantities, Units, Dimensions and Values) proposed by a working group of the SysML 1.2 Revision Task Force (RTF), working in close coordination with the OMG MARTE specification group. This model library is specified in a UML/SysML class/block diagram in the OMG SysML, Version 1.2 specification (http://www.omg.org/spec/SysML/1.2/). This model is described in OMG  SysML, Version 1.2 Appendix C.4 Model Library for Quantity Kinds and Units (http://ontolog.cim3.net/file/resource/reference/UoM_Ontology_Standard/available-UoM-references/QUDV-Annex-C4-C5--OMG-SysML-v1-2_Oct-2009.pdf).		
 	
 The QUDV model has also been represented in the form of an ontology using a formal ontology definition language. The resulting OWL ontology, called the QUDV ontology http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:qudv_owl has been published by members of the QUDV working group of the SysML 1.2 Revision Task Force (RTF). 
 
 		OMG SysML is a trademark of OMG (see http://www.omg.org/spec/SysML/1.2/PDF/ for the conditions of use of the  OMG  SysML, Version 1.2  specification).
 		</rdfs:comment>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >This Model Library for Quantities, Units, Dimensions and Values (QUDV)  (Note: in the ontology, the SYSML-QUDV definitions are flagged with a rdfs:seeAlso annotation equal to http://www.omgsysml.org/qudv).</rdfs:comment>
-    <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >sysml-qudv:qudv_owl  Copyright 2009 - 2011 The QUDV authors</dc:rights>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    ></rdfs:comment>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Nicolas Rouquette (NASA-JPL, USA and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
-    <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu/qu</dc:identifier>
-    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Huascar Espinoza (CEA, France and QUDV working group of the SysML 1.2 Revision Task Force (RTF))</dc:creator>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.w3.org/2005/Incubator/ssn/</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org or alternatively, for enquiries about the QUDV model,  to the QUDV mailing list: http://www.omg.org/publicarchives/qudv/</rdfs:comment>
-  </owl:Ontology>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Unit">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:rest rdf:parseType="Resource">
-                <rdf:rest rdf:parseType="Resource">
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:rest>
-              </rdf:rest>
-            </rdf:rest>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A Unit is an abstract classifier that represents the [VIM] concept of "measurement unit" that is defined as "real scalar quantity,
-defined and adopted by convention, with which any other quantity of the same kind can be compared to express the ratio of the
-two quantities as a number."</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Unit</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'Unit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#ScaleValueDefinition">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >ScaleValueDefinition</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'ScaleValueDefinition' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A ScaleValueDefinition represents a specific value for a measurement scale.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SpecializedQuantityKind">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >SpecializedQuantityKind</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A SpecializedQuantityKind is a QuantityKind that represents a kind of quantity that is a specialization of another kind of
-quantity.
-For example, "distance", "width", "depth", "radius" and "wavelength" can all be specified as specializations of the "length"
-SimpleQuantityKind.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'SpecializedQuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    </rdfs:subClassOf>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A LinearConversionUnit is a ConversionBasedUnit that represents a measurement unit that is defined with respect to another
-measurement reference unit through a linear conversion relationship with a conversion factor.
-The unit conversion relationship is defined by the following equation:
-valueRU = factor · valueCU,
-where:
-valueRU is the quantity value expressed in the referenceUnit, and,
-valueCU is the quantity value expressed in the LinearConversionUnit.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'LinearConversionUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#ConversionBasedUnit"/>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >LinearConversionUnit</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SimpleQuantityKind">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >SimpleQuantityKind</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'SimpleQuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A SimpleQuantityKind is a QuantityKind that represents a kind of quantity that does not depend on any other QuantityKind.
-Typically a base quantity would be specified as a SimpleQuantityKind.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Scale">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'Scale' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A Scale represents the [VIM] concept of a "measurement scale" that is defined as an "ordered set of quantity values of
-quantities of a given kind of quantity used in ranking, according to magnitude, quantities of that kind." A Scale specifies one
-or more fixed values that have a specific significance in the definition of the associating QuantityKind.
-For example the "thermodynamic temperature" kind of quantity is defined by specifying the values of 0 and 273.16 kelvin as
-the temperatures of absolute zero and the triple point of water respectively.
-A Scale does not always need to specify a unit. For example the "Rockwell C Hardness Scale" or the "Beaufort Wind Force
-Scale" are ordinal scales that do not have a particular associated unit. Similarly, subjective scales for a "priority" or "risk" kind
-of quantity with e.g. value definitions 0 for "low", 1 for "medium" and 3 for "high" do not have a particular associated unit.</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:rest>
-          <rdf:first>
-            <owl:Restriction>
-              <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#ScaleValueDefinition"/>
-              <owl:onProperty>
-                <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition"/>
-              </owl:onProperty>
-            </owl:Restriction>
-          </rdf:first>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Scale</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#UnitFactor">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'UnitFactor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A UnitFactor represents a factor in the product of powers that defines a DerivedUnit.</rdfs:comment>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >UnitFactor</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKindFactor">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >QuantityKindFactor</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A QuantityKindFactor represents a factor in the product of powers that defines a DerivedQuantityKind.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'QuantityKindFactor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SystemOfQuantities">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A SystemOfQuantities represents the [VIM] concept of 'system of quantities' that is defined as a 'set of quantities together with a set of non-contradictory equations relating those quantities'. It collects a list of QuantityKind that specifies the kinds of quantity that are known in the system.
+        <dc:identifier rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu/qu</dc:identifier>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.w3.org/2005/Incubator/ssn/</rdfs:seeAlso>
+        <dc:rights rdf:datatype="&xsd;string">qu.owl  Copyright 2010 - 2011 CSIRO</dc:rights>
+        <dc:rights rdf:datatype="&xsd;string">sysml-qudv:qudv_owl  Copyright 2009 - 2011 The QUDV authors</dc:rights>
+    </owl:Ontology>
+    
 
-The International System of Quantities (ISQ) is an example of a SystemOfQuantities, defined in ISO 31 and ISO/IEC 80000.</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:first>
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-                </owl:someValuesFrom>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityComponent"/>
-                </owl:onProperty>
-              </owl:Restriction>
-            </rdf:first>
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:first>
-                <owl:Restriction>
-                  <owl:allValuesFrom>
-                    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-                  </owl:allValuesFrom>
-                  <owl:onProperty>
-                    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseQuantityKind"/>
-                  </owl:onProperty>
-                </owl:Restriction>
-              </rdf:first>
-              <rdf:rest rdf:parseType="Resource">
-                <rdf:rest rdf:parseType="Resource">
-                  <rdf:rest rdf:parseType="Resource">
-                    <rdf:rest rdf:parseType="Resource">
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:rest>
-                  </rdf:rest>
-                </rdf:rest>
-              </rdf:rest>
-            </rdf:rest>
-          </rdf:rest>
-          <rdf:first>
-            <owl:Restriction>
-              <owl:someValuesFrom>
-                <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Dimension"/>
-              </owl:someValuesFrom>
-              <owl:onProperty>
-                <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#dimension"/>
-              </owl:onProperty>
-            </owl:Restriction>
-          </rdf:first>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'SystemOfQuantities' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >SystemOfQuantities</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#PrefixedUnit">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#ConversionBasedUnit"/>
-    </rdfs:subClassOf>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'Prefix' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A Prefix represents a named multiple or submultiple multiplication factor used in the specification of a PrefixedUnit. A
-SystemOfUnits may specify a set of prefixes.</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >PrefixedUnit</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SystemOfUnits">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:rest rdf:parseType="Resource">
-                <rdf:rest rdf:parseType="Resource">
-                  <rdf:rest rdf:parseType="Resource">
-                    <rdf:rest rdf:parseType="Resource">
-                      <rdf:rest rdf:parseType="Resource">
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                      </rdf:rest>
-                    </rdf:rest>
-                  </rdf:rest>
-                </rdf:rest>
-                <rdf:first>
-                  <owl:Restriction>
-                    <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#SystemOfQuantities"/>
-                    <owl:onProperty>
-                      <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#systemOfQuantities"/>
-                    </owl:onProperty>
-                  </owl:Restriction>
-                </rdf:first>
-              </rdf:rest>
-              <rdf:first>
-                <owl:Restriction>
-                  <owl:onProperty>
-                    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#prefix"/>
-                  </owl:onProperty>
-                  <owl:allValuesFrom>
-                    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Prefix"/>
-                  </owl:allValuesFrom>
-                </owl:Restriction>
-              </rdf:first>
-            </rdf:rest>
-            <rdf:first>
-              <owl:Restriction>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseUnit"/>
-                </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-              </owl:Restriction>
-            </rdf:first>
-          </rdf:rest>
-          <rdf:first>
-            <owl:Restriction>
-              <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-              <owl:onProperty>
-                <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitComponent"/>
-              </owl:onProperty>
-            </owl:Restriction>
-          </rdf:first>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >SystemOfUnits</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'SystemOfUnits' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A SystemOfUnits represents the [VIM] concept of 'system of units' that is defined as 'set of base units and derived units, together with their multiples and submultiples, defined in accordance with given rules, for a given system of quantities'. It collects a list of Unit that are known in the system. A SysML SystemOfUnits only optionally defines multiples and submultiples.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Prefix">
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:rest>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'Prefix' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A Prefix represents a named multiple or submultiple multiplication factor used in the specification of a PrefixedUnit. A
-SystemOfUnits may specify a set of prefixes.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Prefix</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A DerivedUnit is a Unit that represents a measurement unit that is defined as a product of powers of one or more other
-measurement units.
-For example the measurement unit "metre per second" for "velocity" is specified as the product of "metre" to the power one
-times "second" to the power minus one</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >DerivedUnit</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitFactor"/>
-        </owl:onProperty>
-        <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#UnitFactor"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'DerivedUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#DimensionFactor">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >DimensionFactor</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A DimensionFactor represents a factor in the product of powers that defines a Dimension.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'DimensionFactor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#DerivedQuantityKind">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'DerivedQuantityKind ' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A DerivedQuantityKind is a QuantityKind that represents a kind of quantity that is defined as a product of powers of one or
-more other kinds of quantity. A DerivedQuantityKind may also be used to define a synonym kind of quantity for another kind
-of quantity.
-For example "velocity" can be specified as the product of "length" to the power one times "time" to the power minus one, and
-subsequently "speed" can be specified as "velocity" to the power one.</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKindFactor"/>
-        </owl:onProperty>
-        <owl:someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKindFactor"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    </rdfs:subClassOf>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >DerivedQuantityKind</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SimpleUnit">
-    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A SimpleUnit is a Unit that represents a measurement unit that does not depend on any other Unit. Typically a base unit would
-be specified as a SimpleUnit.</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >SimpleUnit</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'SimpleUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#GeneralConversionUnit">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'GeneralConversionUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >GeneralConversionUnit</rdfs:label>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#ConversionBasedUnit"/>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A GeneralConversionUnit is a ConversionBasedUnit that represents a measurement unit that is defined with respect to another
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="&cc;license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/author -->
+
+    <owl:AnnotationProperty rdf:about="&dc;author"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="&dc;identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="&dct;created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="&dct;modified"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#baseDimension -->
+
+    <owl:ObjectProperty rdf:about="&qu;baseDimension">
+        <rdfs:label rdf:datatype="&xsd;string">baseDimension</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A Reference to the QuantityKind that represents the base quantity dimension in the factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;baseDimension&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#baseQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="&qu;baseQuantityKind">
+        <rdfs:label rdf:datatype="&xsd;string">baseQuantityKind</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ordered set of QuantityKind that specifies the base quantities of the system of quantities. This is a subset of the complete quantityKind list. The base quantities define the basis for the quantity dimension of a kind of quantity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;baseQuantityKind&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:subPropertyOf rdf:resource="&qu;quantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#baseUnit -->
+
+    <owl:ObjectProperty rdf:about="&qu;baseUnit">
+        <rdfs:label rdf:datatype="&xsd;string">baseUnit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ordered set of Unit that specifies the base units of the system of units. A &quot;base unit&quot; is defined in [VIM] as a &quot;measurement unit that is adopted by convention for a base quantity,&quot; i.e. it is the (preferred) unit in which base quantities of the associated systemOfQuantities are expressed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;baseUnit&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:subPropertyOf rdf:resource="&qu;unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#dimension -->
+
+    <owl:ObjectProperty rdf:about="&qu;dimension">
+        <rdfs:label rdf:datatype="&xsd;string">dimension</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Derived ordered set of Dimension. The actual dimension of a QuantityKind depends on the list of baseQuantityKind that are specified in an actual SystemOfQuantities, see the DerivedDimensions constraint.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;dimension&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#dimensionFactor -->
+
+    <owl:ObjectProperty rdf:about="&qu;dimensionFactor">
+        <rdfs:label rdf:datatype="&xsd;string">dimension factor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Rational number that specifies the factor in the dimension conversion relationship.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;factor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&qu;DimensionFactor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#factorQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="&qu;factorQuantityKind">
+        <rdfs:label rdf:datatype="&xsd;string">factorQuantityKind</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of the associated QuantityKind.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;quantityKind&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#generalQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="&qu;generalQuantityKind">
+        <rdfs:label rdf:datatype="&xsd;string">generalQuantityKind</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A generalization relationship between two kinds of quantities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;general&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;generalization&apos; [QUDT] http:qudt.org</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#prefix -->
+
+    <owl:ObjectProperty rdf:about="&qu;prefix">
+        <rdfs:label rdf:datatype="&xsd;string">prefix</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ordered set of Prefix that specifies the prefixes for multiples and submultiples of units in the system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;prefix&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#propertyType -->
+
+    <owl:ObjectProperty rdf:about="&qu;propertyType">
+        <rdfs:label rdf:datatype="&xsd;string">propertyType</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of the associated ProeprtyType.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <rdfs:range rdf:resource="&qu;PropertyKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#quantityComponent -->
+
+    <owl:ObjectProperty rdf:about="&qu;quantityComponent">
+        <rdfs:label rdf:datatype="&xsd;string">quantityComponent</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Quantities attached to a system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;quantityKind&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind -->
+
+    <owl:ObjectProperty rdf:about="&qu;quantityKind">
+        <rdfs:label rdf:datatype="&xsd;string">quantityKind</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of the associated QuantityKind.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;quantityKind&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#quantityKindFactor -->
+
+    <owl:ObjectProperty rdf:about="&qu;quantityKindFactor">
+        <rdfs:label rdf:datatype="&xsd;string">quantity kind factor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Rational number that specifies the factor in the quantity conversion relationship.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;factor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&qu;QuantityKindFactor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#referenceUnit -->
+
+    <owl:ObjectProperty rdf:about="&qu;referenceUnit">
+        <rdfs:label rdf:datatype="&xsd;string">referenceUnit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specifies the unit with respect to which the ConversionBasedUnit is defined.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;referenceUnit&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#scale -->
+
+    <owl:ObjectProperty rdf:about="&qu;scale">
+        <rdfs:label rdf:datatype="&xsd;string">scale</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of a Scale that is associated to the QuantityKind.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;scale&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&qu;Scale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition -->
+
+    <owl:ObjectProperty rdf:about="&qu;scaleValueDefinition">
+        <rdfs:label rdf:datatype="&xsd;string">scaleValueDefinition</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ordered set of ScaleValueDefinition that specifies the defined numerical value(s) and textual definition(s) for the measurement scale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;valueDefinition&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&qu;ScaleValueDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#specificQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="&qu;specificQuantityKind">
+        <rdfs:label rdf:datatype="&xsd;string">specificQuantityKind</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A specialization relationship between two kinds of quantities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;specific&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <owl:inverseOf rdf:resource="&qu;generalQuantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#systemOfQuantities -->
+
+    <owl:ObjectProperty rdf:about="&qu;systemOfQuantities">
+        <rdfs:label rdf:datatype="&xsd;string">systemOfQuantities</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Reference to the SystemOfQuantities for which the units are specified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;systemOfQuantities&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unit -->
+
+    <owl:ObjectProperty rdf:about="&qu;unit">
+        <rdfs:label rdf:datatype="&xsd;string">unit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of the associated Unit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;quantityKind&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unitComponent -->
+
+    <owl:ObjectProperty rdf:about="&qu;unitComponent">
+        <rdfs:label rdf:datatype="&xsd;string">unitComponent</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Ordered set of Unit that specifies the units that are known in the system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;unit&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unitFactor -->
+
+    <owl:ObjectProperty rdf:about="&qu;unitFactor">
+        <rdfs:label rdf:datatype="&xsd;string">unit factor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Rational number that specifies the factor in the unit conversion relationship.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;factor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&qu;UnitFactor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unitKind -->
+
+    <owl:ObjectProperty rdf:about="&qu;unitKind">
+        <rdfs:label rdf:datatype="&xsd;string">unitKind</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specification of the associated Unit &quot;Kind&quot;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <owl:inverseOf rdf:resource="&qu;quantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#code -->
+
+    <owl:DatatypeProperty rdf:about="&qu;code">
+        <rdfs:label rdf:datatype="&xsd;string">code</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A code is a string that uniquely identifies an individual.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:description rdf:datatype="&xsd;string">short symbolic name</dc:description>
+        <dc:source rdf:datatype="&xsd;string">skos:closeMatch &apos;code&apos; [QUDT] http://qudt.org/</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#conversionFactor -->
+
+    <owl:DatatypeProperty rdf:about="&qu;conversionFactor">
+        <rdfs:label rdf:datatype="&xsd;string">conversionFactor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Rational number that specifies the factor in the unit conversion relationship.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;factor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#conversionOffset -->
+
+    <owl:DatatypeProperty rdf:about="&qu;conversionOffset">
+        <rdfs:label rdf:datatype="&xsd;string">conversionOffset</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Rational number that specifies the offset in the unit conversion relationship.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;offset&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#definitionURI -->
+
+    <owl:DatatypeProperty rdf:about="&qu;definitionURI">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">definitionURI</rdfs:label>
+        <dc:description rdf:datatype="&xsd;string">URI that contains an authoritative definition of the referent thing</dc:description>
+        <rdfs:comment rdf:datatype="&xsd;string">URI that references an external definition.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;definitionURI&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#description -->
+
+    <owl:DatatypeProperty rdf:about="&qu;description">
+        <rdfs:label rdf:datatype="&xsd;string">description</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Textual description</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;description&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#exponent -->
+
+    <owl:DatatypeProperty rdf:about="&qu;exponent">
+        <rdfs:label rdf:datatype="&xsd;string">exponent</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Rational number that specifies the exponent of the power to which the unit is raised.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;exponent&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#expression -->
+
+    <owl:DatatypeProperty rdf:about="&qu;expression">
+        <rdfs:label rdf:datatype="&xsd;string">conversionExpression</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specifies the unit conversion relationship in some expression syntax.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;expression&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#name -->
+
+    <owl:DatatypeProperty rdf:about="&qu;name">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">name</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:description rdf:datatype="&xsd;string">human-readable word or sequence of words by which a thing is known</dc:description>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;name&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#numericalValue -->
+
+    <owl:DatatypeProperty rdf:about="&qu;numericalValue">
+        <rdfs:label rdf:datatype="&xsd;string">numericalValue</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specifies the numerical value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;value&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#symbol -->
+
+    <owl:DatatypeProperty rdf:about="&qu;symbol">
+        <rdfs:label rdf:datatype="&xsd;string">symbol</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Short symbolic name.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:description rdf:datatype="&xsd;string">short symbolic name</dc:description>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;symbol&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#symbolicExpression -->
+
+    <owl:DatatypeProperty rdf:about="&qu;symbolicExpression">
+        <rdfs:label rdf:datatype="&xsd;string">symbolicExpression</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Symbolic expression of the quantity dimension&apos;s product of powers, in terms of symbols of the kinds of quantity that represent the base kinds of quantity and their exponents.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;symbolicExpression&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#unitMultipleFactor -->
+
+    <owl:DatatypeProperty rdf:about="&qu;unitMultipleFactor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">unitMultipleFactor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Specifies the multiple or submultiple multiplication factor.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;factor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#DimensionFactor -->
+
+    <owl:Class rdf:about="&qu;DimensionFactor">
+        <rdfs:label rdf:datatype="&xsd;string">DimensionFactor</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A DimensionFactor represents a factor in the product of powers that defines a Dimension.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;DimensionFactor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#GeneralConversionUnit -->
+
+    <owl:Class rdf:about="&qu;GeneralConversionUnit">
+        <rdfs:label rdf:datatype="&xsd;string">GeneralConversionUnit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A GeneralConversionUnit is a ConversionBasedUnit that represents a measurement unit that is defined with respect to another
 reference measurement unit through a conversion relationship expressed in some syntax through a general mathematical
 expression.
 The unit conversion relationship is defined by the following equation:
@@ -511,568 +645,141 @@ where:
 valueRU is the quantity value expressed in the referenceUnit, and,
 valueCU is the quantity value expressed in the GeneralConversionUnit, and,
 f(valueRU, valueCU) is a mathematical expression that includes valueRU and valueCU.</rdfs:comment>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-  </owl:Class>
-  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A PropertyKind  is a meta-property which helps to characterise categories of properties e.g. scalar, vector</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >PropertyKind </rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Dimension">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'Dimension' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:first>
-            <owl:Restriction>
-              <owl:allValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#DimensionFactor"/>
-              <owl:onProperty>
-                <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#dimensionFactor"/>
-              </owl:onProperty>
-            </owl:Restriction>
-          </rdf:first>
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A Dimension represents the [VIM] concept of 'quantity dimension' that is defined as 'expression of the dependence of a quantity on the base quantities of a system of quantities as a product of powers of factors corresponding to the base quantities, omitting any numerical factor.'
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;GeneralConversionUnit&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
 
-For example in the ISQ the quantity dimension of 'force' is denoted by dim F = Lï¿½Mï¿½T^2, where 'F' is the symbol for 'force', and 'L', 'M', 'T' are the symbols for the ISQ base quantities 'length', 'mass' and 'time' respectively.
 
-The Dimension of any QuantityKind can be derived through the algorithm that is defined in C.5.3.20 with SystemOfQuantities. The actual Dimension for a given QuantityKind depends on the choice of baseQuantityKind specified in a SystemOfQuantities.</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Dimension</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A QuantityKind is an abstract classifier that represents the [VIM] concept of "kind of quantity" that is defined as "aspect
-common to mutually comparable quantities." A QuantityKind represents the essence of a quantity without any numerical
-value or unit. Quantities of the same kind within a given system of quantities have the same quantity dimension. However,
-quantities of the same dimension are not necessarily of the same kind.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'QuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:intersectionOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:rest rdf:parseType="Resource">
-                <rdf:rest rdf:parseType="Resource">
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </rdf:rest>
-              </rdf:rest>
-            </rdf:rest>
-          </rdf:rest>
-        </owl:intersectionOf>
-      </owl:Class>
-    </rdfs:subClassOf>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >QuantityKind</rdfs:label>
-  </owl:Class>
-  <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#ConversionBasedUnit">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'ConversionBasedUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A ConversionBasedUnit is an abstract classifier that is a Unit that represents a measurement unit that is defined with respect to
-another reference unit through an explicit conversion relationship.</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >ConversionBasedUnit</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#propertyType">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >propertyType</rdfs:label>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind"/>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specification of the associated ProeprtyType.</rdfs:comment>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#dimensionFactor">
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#DimensionFactor"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Rational number that specifies the factor in the dimension conversion relationship.</rdfs:comment>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'factor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >dimension factor</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#specificQuantityKind">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#generalQuantityKind"/>
-    </owl:inverseOf>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'specific' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#SpecializedQuantityKind"/>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A specialization relationship between two kinds of quantities.</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >specificQuantityKind</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#systemOfQuantities">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >systemOfQuantities</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Reference to the SystemOfQuantities for which the units are specified.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'systemOfQuantities' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#SystemOfQuantities"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unit">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'quantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >unit</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specification of the associated Unit.</rdfs:comment>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseUnit">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Ordered set of Unit that specifies the base units of the system of units. A "base unit" is defined in [VIM] as a "measurement unit that is adopted by convention for a base quantity," i.e. it is the (preferred) unit in which base quantities of the associated systemOfQuantities are expressed.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'baseUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#unit"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >baseUnit</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#dimension">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Derived ordered set of Dimension. The actual dimension of a QuantityKind depends on the list of baseQuantityKind that are specified in an actual SystemOfQuantities, see the DerivedDimensions constraint.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'dimension' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Dimension"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >dimension</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#prefix">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >prefix</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'prefix' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Prefix"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Ordered set of Prefix that specifies the prefixes for multiples and submultiples of units in the system</rdfs:comment>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#referenceUnit">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >referenceUnit</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specifies the unit with respect to which the ConversionBasedUnit is defined.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'referenceUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseQuantityKind">
-    <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind"/>
-    </rdfs:subPropertyOf>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Ordered set of QuantityKind that specifies the base quantities of the system of quantities. This is a subset of the complete quantityKind list. The base quantities define the basis for the quantity dimension of a kind of quantity.</rdfs:comment>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >baseQuantityKind</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'baseQuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'quantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >quantityKind</rdfs:label>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specification of the associated QuantityKind.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitKind">
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specification of the associated Unit "Kind".</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >unitKind</rdfs:label>
-    <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKind"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#factorQuantityKind">
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >factorQuantityKind</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specification of the associated QuantityKind.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'quantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#baseDimension">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >baseDimension</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A Reference to the QuantityKind that represents the base quantity dimension in the factor.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'baseDimension' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitComponent">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'unit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Ordered set of Unit that specifies the units that are known in the system.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >unitComponent</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#generalQuantityKind">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A generalization relationship between two kinds of quantities.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'general' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'generalization' [QUDT] http:qudt.org</dc:source>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >generalQuantityKind</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitFactor">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#UnitFactor"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Rational number that specifies the factor in the unit conversion relationship.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'factor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >unit factor</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityComponent">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Dimension</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >quantityComponent</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Quantities attached to a system.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'quantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#quantityKindFactor">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >quantity kind factor</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'factor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Rational number that specifies the factor in the quantity conversion relationship.</rdfs:comment>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKindFactor"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'valueDefinition' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#ScaleValueDefinition"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >scaleValueDefinition</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Ordered set of ScaleValueDefinition that specifies the defined numerical value(s) and textual definition(s) for the measurement scale.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#scale">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >scale</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specification of a Scale that is associated to the QuantityKind.</rdfs:comment>
-    <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#Scale"/>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'scale' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#definitionURI">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >URI that references an external definition.</rdfs:comment>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >definitionURI</rdfs:label>
-    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >URI that contains an authoritative definition of the referent thing</dc:description>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'definitionURI' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#expression">
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specifies the unit conversion relationship in some expression syntax.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'expression' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >conversionExpression</rdfs:label>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#symbolicExpression">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Symbolic expression of the quantity dimension's product of powers, in terms of symbols of the kinds of quantity that represent the base kinds of quantity and their exponents.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >symbolicExpression</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'symbolicExpression' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#unitMultipleFactor">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'factor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specifies the multiple or submultiple multiplication factor.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >unitMultipleFactor</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#conversionFactor">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >conversionFactor</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'factor' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Rational number that specifies the factor in the unit conversion relationship.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#code">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >A code is a string that uniquely identifies an individual.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >short symbolic name</dc:description>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >code</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:closeMatch 'code' [QUDT] http://qudt.org/</dc:source>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#conversionOffset">
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'offset' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Rational number that specifies the offset in the unit conversion relationship.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >conversionOffset</rdfs:label>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#exponent">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >exponent</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Rational number that specifies the exponent of the power to which the unit is raised.</rdfs:comment>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'exponent' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#numericalValue">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >numericalValue</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Specifies the numerical value.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'value' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#name">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >name</rdfs:label>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >human-readable word or sequence of words by which a thing is known</dc:description>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'name' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#symbol">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >symbol</rdfs:label>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Short symbolic name.</rdfs:comment>
-    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >short symbolic name</dc:description>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'symbol' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#description">
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.omgsysml.org/qudv#Data</rdfs:seeAlso>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >description</rdfs:label>
-    <dc:source rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >skos:exactMatch 'description' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
-    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Textual description</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-  <rdf:Description>
-    <rdf:first rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
-    <rdf:rest rdf:parseType="Collection">
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKindFactor"/>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Scale"/>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#ScaleValueDefinition"/>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SystemOfQuantities"/>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#SystemOfUnits"/>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#Unit"/>
-      <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/qu/qu#UnitFactor"/>
-    </rdf:rest>
-  </rdf:Description>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-  <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
-  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/author"/>
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit -->
+
+    <owl:Class rdf:about="&qu;LinearConversionUnit">
+        <rdfs:label rdf:datatype="&xsd;string">LinearConversionUnit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A LinearConversionUnit is a ConversionBasedUnit that represents a measurement unit that is defined with respect to another
+measurement reference unit through a linear conversion relationship with a conversion factor.
+The unit conversion relationship is defined by the following equation:
+valueRU = factor · valueCU,
+where:
+valueRU is the quantity value expressed in the referenceUnit, and,
+valueCU is the quantity value expressed in the LinearConversionUnit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;LinearConversionUnit&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#PrefixedUnit -->
+
+    <owl:Class rdf:about="&qu;PrefixedUnit">
+        <rdfs:label rdf:datatype="&xsd;string">PrefixedUnit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A Prefix represents a named multiple or submultiple multiplication factor used in the specification of a PrefixedUnit. A
+SystemOfUnits may specify a set of prefixes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;Prefix&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind -->
+
+    <owl:Class rdf:about="&qu;PropertyKind">
+        <rdfs:label rdf:datatype="&xsd;string">PropertyKind </rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A PropertyKind  is a meta-property which helps to characterise categories of properties e.g. scalar, vector</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKindFactor -->
+
+    <owl:Class rdf:about="&qu;QuantityKindFactor">
+        <rdfs:label rdf:datatype="&xsd;string">QuantityKindFactor</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:resource="&rdf;nil"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A QuantityKindFactor represents a factor in the product of powers that defines a DerivedQuantityKind.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Quantity</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;QuantityKindFactor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#Scale -->
+
+    <owl:Class rdf:about="&qu;Scale">
+        <rdfs:label rdf:datatype="&xsd;string">Scale</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&qu;scaleValueDefinition"/>
+                        <owl:someValuesFrom rdf:resource="&qu;ScaleValueDefinition"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A Scale represents the [VIM] concept of a &quot;measurement scale&quot; that is defined as an &quot;ordered set of quantity values of
+quantities of a given kind of quantity used in ranking, according to magnitude, quantities of that kind.&quot; A Scale specifies one
+or more fixed values that have a specific significance in the definition of the associating QuantityKind.
+For example the &quot;thermodynamic temperature&quot; kind of quantity is defined by specifying the values of 0 and 273.16 kelvin as
+the temperatures of absolute zero and the triple point of water respectively.
+A Scale does not always need to specify a unit. For example the &quot;Rockwell C Hardness Scale&quot; or the &quot;Beaufort Wind Force
+Scale&quot; are ordinal scales that do not have a particular associated unit. Similarly, subjective scales for a &quot;priority&quot; or &quot;risk&quot; kind
+of quantity with e.g. value definitions 0 for &quot;low&quot;, 1 for &quot;medium&quot; and 3 for &quot;high&quot; do not have a particular associated unit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;Scale&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#ScaleValueDefinition -->
+
+    <owl:Class rdf:about="&qu;ScaleValueDefinition">
+        <rdfs:label rdf:datatype="&xsd;string">ScaleValueDefinition</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:resource="&rdf;nil"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A ScaleValueDefinition represents a specific value for a measurement scale.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Scale</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;ScaleValueDefinition&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/qu/qu#UnitFactor -->
+
+    <owl:Class rdf:about="&qu;UnitFactor">
+        <rdfs:label rdf:datatype="&xsd;string">UnitFactor</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:resource="&rdf;nil"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string">A UnitFactor represents a factor in the product of powers that defines a DerivedUnit.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://purl.oclc.org/NET/ssnx/qu</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.omgsysml.org/qudv#Unit</rdfs:seeAlso>
+        <dc:source rdf:datatype="&xsd;string">skos:exactMatch &apos;UnitFactor&apos; [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
 </rdf:RDF>
 
-<!-- Created with Protege (with OWL Plugin 3.4.1, Build 536)  http://protege.stanford.edu -->
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
